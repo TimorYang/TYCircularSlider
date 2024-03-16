@@ -8,5 +8,15 @@
 import UIKit
 
 class CircularPoint: NSObject {
-
+    /// 值
+    var value: CGFloat = CGFLOAT_MAX
+    /// 是否是起点
+    var isStart = false
+    /// 是否是终点
+    var isEnd = false
+    
+    var next: CircularPoint?
+    
+    weak var previous: CircularPoint?
+    
 }
