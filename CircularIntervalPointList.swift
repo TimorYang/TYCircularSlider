@@ -9,6 +9,7 @@ import UIKit
 
 class CircularIntervalPointList: NSObject {
     private var head: CircularIntervalPoint?
+    private var nodeCount = 0  // 维护链表中的节点数
     
     // 判断链表是否为空
     var isEmpty: Bool {
@@ -20,12 +21,18 @@ class CircularIntervalPointList: NSObject {
         return head
     }
     
+    // 链表的节点数
+    var count: Int {
+        return nodeCount
+    }
+    
     // 添加新元素到链表
     func append(node: CircularIntervalPoint) {
         guard let headNode = head else {
             head = node
             node.next = node
             node.previous = node
+            nodeCount = 1  // 链表之前为空，现在有一个节点
             return
         }
         
@@ -34,6 +41,7 @@ class CircularIntervalPointList: NSObject {
         node.previous = tailNode
         tailNode?.next = node
         headNode.previous = node
+        nodeCount += 1  // 添加节点后，节点数增加
     }
     
     func insert(node newNode: CircularIntervalPoint, afterNode: CircularIntervalPoint) {
@@ -42,12 +50,14 @@ class CircularIntervalPointList: NSObject {
         newNode.previous = afterNode
         afterNode.next = newNode
         nextNode?.previous = newNode
+        nodeCount += 1  // 插入节点后，节点数增加
     }
     
     // 删除节点
     func remove(node: CircularIntervalPoint) {
         guard let nextNode = node.next, let prevNode = node.previous, nextNode != node else {
             head = nil
+            nodeCount = 0  // 如果链表变为空，节点数重置为0
             return
         }
         
@@ -59,7 +69,9 @@ class CircularIntervalPointList: NSObject {
         
         node.previous = nil
         node.next = nil
+        nodeCount -= 1  // 删除节点后，节点数减少
     }
+    
     
     // 查找节点
     func findNode(withStart value: CGFloat) -> CircularIntervalPoint? {

@@ -357,7 +357,6 @@ open class RangeCircularSlider: CircularSlider {
                 let distance = 1.0 * 60 * 60
                 let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
                 let startAngle = CircularSliderHelper.scaleToAngle(value: oldValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
-                // get end angle from end value
                 let endAngle = CircularSliderHelper.scaleToAngle(value: newValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
                 if endAngle > startAngle {
                     print("222: ------------ 开始顺时针方向 ------------")
@@ -431,39 +430,30 @@ open class RangeCircularSlider: CircularSlider {
                         return true
                     }
                     print("333: 所有计划集合: **********")
-                    var isPointsInSameLine = false
                     var loop = 0
                     var stop = false
                     let startPoint = _intervalThumbPoint
                     var currentPoint = _intervalThumbPoint
                     repeat {
-                        print("333: isPointsInSameLine: \(isPointsInSameLine)")
                         print("333: currentPoint: \(currentPoint)")
-                        if isPointsInSameLine {
+                        if loop == 0 {
+                            if let _previous = currentPoint.previous {
+                                let result2 = arePointsTouchingOnSameCircle(point1: currentPoint.start, point2: _previous.end, touchRadius: radius, minAngle: 30.0)
+                                print("333: 碰撞结果: \(result2), point1: \(currentPoint), point2: \(_previous)")
+                                if result2 {
+                                    _previous.end = currentPoint.start - distance > 0 ? currentPoint.start - distance : maximumValue - distance + currentPoint.start
+                                } else {
+                                    stop = true
+                                }
+                            } else {
+                                stop = true
+                            }
+                        } else {
                             let result = arePointsTouchingOnSameCircle(point1: currentPoint.end, point2: currentPoint.start, touchRadius: radius, minAngle: 30.0)
                             print("333: 碰撞结果: \(result), point1: \(currentPoint), point2: \(currentPoint)")
                             if result {
                                 currentPoint.start = currentPoint.end - distance >= 0 ? currentPoint.end - distance : maximumValue - distance + currentPoint.end
-                                
                                 if let _previous = currentPoint.previous {
-                                    let result2 = arePointsTouchingOnSameCircle(point1: currentPoint.start, point2: _previous.end, touchRadius: radius, minAngle: 30.0)
-                                    print("333: 碰撞结果: \(result2), point1: \(currentPoint), point2: \(_previous)")
-                                    if result2 {
-                                        _previous.end = currentPoint.start - distance > 0 ? currentPoint.start - distance : maximumValue - distance + currentPoint.start
-                                    } else {
-                                        stop = true
-                                    }
-                                } else {
-                                    stop = true
-                                }
-                                
-                            } else {
-                                stop = true
-                            }
-                            
-                        } else {
-                            if loop == 0 {
-                                if let _previous = _intervalThumbPoint.previous {
                                     let result = arePointsTouchingOnSameCircle(point1: currentPoint.start, point2: _previous.end, touchRadius: radius, minAngle: 30.0)
                                     print("333: 碰撞结果: \(result), point1: \(currentPoint), point2: \(_previous)")
                                     if result {
@@ -475,29 +465,9 @@ open class RangeCircularSlider: CircularSlider {
                                     stop = true
                                 }
                             } else {
-                                if let _next = currentPoint.next, loop != 0 {
-                                    let result2 = arePointsTouchingOnSameCircle(point1: _next.start, point2: currentPoint.end, touchRadius: radius, minAngle: 30.0)
-                                    print("333: 碰撞结果: \(result2), point1: \(_next), point2: \(currentPoint)")
-                                    if result2 {
-                                        currentPoint.end = _next.start - distance >= 0 ? _next.start - distance : maximumValue - distance + _next.start
-                                        if let _previous = _intervalThumbPoint.previous {
-                                            let result = arePointsTouchingOnSameCircle(point1: currentPoint.end, point2: currentPoint.start, touchRadius: radius, minAngle: 30.0)
-                                            print("333: 碰撞结果: \(result), point1: \(currentPoint), point2: \(currentPoint)")
-                                            if result {
-                                                currentPoint.start = currentPoint.end - distance >= 0 ? currentPoint.end - distance : maximumValue - distance + currentPoint.end
-                                            } else {
-                                                stop = true
-                                            }
-                                        } else {
-                                            stop = true
-                                        }
-                                    } else {
-                                        stop = true
-                                    }
-                                }
+                                stop = true
                             }
                         }
-                        isPointsInSameLine = !isPointsInSameLine
                         if let _previous = currentPoint.previous {
                             currentPoint = _previous
                         } else {
@@ -560,27 +530,80 @@ open class RangeCircularSlider: CircularSlider {
                     print("222333: 点没有移动或在完全对称的位置, distance: \(distance)")
                 }
             }
+            print("")
         case .internalPointEnd:
             if let _intervalThumbPoint = intervalThumbPoint {
+                print("888666: ***********开始***********")
                 let oldValue = _intervalThumbPoint.end
                 let newValue = newValue(from: _intervalThumbPoint.end, touch: touchPosition, start: startPoint)
                 _intervalThumbPoint.end = newValue
-                // 后面的点是否碰撞
-                if let _next = _intervalThumbPoint.next {
-                    let result = arePointsTouchingOnSameCircle(point1: _intervalThumbPoint.end, point2: _next.start, touchRadius: radius, minAngle: 30.0)
-                    print("是否和后面的点碰撞: \(result)")
-                    if result {
-                        let distance = abs(oldValue - newValue)
-                        _next.start = _next.start + distance < maximumValue ? _next.start + distance : _next.start - maximumValue + distance
+                let distance = 1.0 * 60 * 60
+                let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
+                let startAngle = CircularSliderHelper.scaleToAngle(value: oldValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
+                let endAngle = CircularSliderHelper.scaleToAngle(value: newValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
+                print("123123: startAngle: \(startAngle), endAngle: \(endAngle)")
+                let movementDirection = determineMovementDirection(startAngle: startAngle, endAngle: endAngle)
+                let pointList = lineList2PointList(from: midIntervalPoints, startPoint: _intervalThumbPoint, isBegin: false)
+                switch movementDirection {
+                case .clockwise:
+                        /// 顺时针旋转
+                        print("888666: ------------开始顺时针旋转------------")
+                        if let _firstPoint = pointList.head {
+                            print("888666: firstPoint: \(_firstPoint)")
+                            var currentPoint = _firstPoint
+                            repeat {
+                                let nextPoint = currentPoint.next!
+                                let result = arePointsTouchingOnSameCircle(point1: currentPoint.value, point2: nextPoint.value, touchRadius: radius, minAngle: 30.0)
+                                print("888666: currentPoint: \(currentPoint), nextPoint: \(nextPoint), 碰撞: \(result)")
+                                if result {
+                                    nextPoint.value = currentPoint.value + distance <= maximumValue ? currentPoint.value + distance : currentPoint.value + distance - maximumValue
+                                    print("888666: new currentPoint: \(currentPoint)")
+                                } else {
+                                    print("888666: 跳出循环")
+                                    break
+                                }
+                                currentPoint = nextPoint
+                            } while currentPoint !== _firstPoint
+                            modifyLineList(by: pointList, selectLine: _intervalThumbPoint)
+                        }
+                        print("888666: ------------结束顺时针旋转------------")
+                case .counterclockwise:
+                    /// 逆时针旋转
+                    print("999666: ------------开始逆时针旋转------------")
+                    if let _firstPoint = pointList.head {
+                        var currentPoint = _firstPoint
+                        print("2341: >>>>>>>>>>>>>开始逆时针旋转>>>>>>>>>>>>>")
+                        repeat {
+                            print("2341: |__ \(currentPoint)")
+                            currentPoint = currentPoint.previous!
+                        } while currentPoint !== _firstPoint
+                        print("2341: ------------------------")
+                        repeat {
+                            print("2341: |__ \(currentPoint)")
+                            let previousPoint = currentPoint.previous!
+                            let result = arePointsTouchingOnSameCircle(point1: currentPoint.value, point2: previousPoint.value, touchRadius: radius, minAngle: 30.0)
+                            if result {
+                                previousPoint.value = currentPoint.value >= distance ? currentPoint.value - distance : currentPoint.value - distance + maximumValue
+                            } else {
+                                break
+                            }
+                            currentPoint = previousPoint
+                        } while currentPoint !== _firstPoint
+                        print("2341: ------------------------")
+                        currentPoint = _firstPoint
+                        repeat {
+                            print("2341: |__ 最新的 \(currentPoint)")
+                            currentPoint = currentPoint.previous!
+                        } while currentPoint !== _firstPoint
+                        print("2341: ------------------------")
+                        print("2341: <<<<<<<<<<<<<结束逆时针旋转<<<<<<<<<<<<<")
+                        modifyLineList(by: pointList, selectLine: _intervalThumbPoint)
                     }
+                    print("999666: ------------结束逆时针旋转------------")
+                case .stationary:
+                    print("101010666: 点没有移动或在完全对称的位置")
                 }
-                
-                let result = arePointsTouchingOnSameCircle(point1: _intervalThumbPoint.end, point2: _intervalThumbPoint.start, touchRadius: radius, minAngle: 30.0)
-                if result {
-                    let distance = abs(oldValue - newValue)
-                    _intervalThumbPoint.start = _intervalThumbPoint.start - distance > 0 ? _intervalThumbPoint.start - distance : maximumValue - _intervalThumbPoint.start + distance
-                }
-                print("是否和前面的点碰撞: \(result)")
+                print("888666: ***********结束***********")
             }
         case .none:
             print("none")
@@ -670,7 +693,7 @@ open class RangeCircularSlider: CircularSlider {
                     }
                     print("111: ---------当前计划---------")
                     midIntervalPoints.traverse { (item: CircularIntervalPoint) in
-                        print("111: \(item.start) - \(item.end)")
+                        print("111: \(item)")
                         return true
                     }
                     print("111: ---------end---------")
@@ -718,7 +741,194 @@ open class RangeCircularSlider: CircularSlider {
         return longPressGestureRecognizer
     }()
     
+    private enum MovementDirection {
+        case clockwise
+        case counterclockwise
+        case stationary
+    }
+    
     // MARK: - Private Properties
-    var midIntervalPoints = CircularIntervalPointList()
+    var midIntervalPoints = CircularIntervalPointList() {
+        didSet {
+            print("2341: @@@@@@@@@@@@@@@我变更了@@@@@@@@@@@@@@@")
+            print("2341: --------------新值开始-------------------")
+            midIntervalPoints.traverse { (item: CircularIntervalPoint) in
+                print("2341: |__ \(item)")
+                return true
+            }
+            print("2341: --------------新值结束-------------------")
+        }
+    }
+    
+    private func lineList2PointList(from lineList: CircularIntervalPointList, startPoint target:CircularIntervalPoint, isBegin begin: Bool ) -> CircularPointList {
+        let result = CircularPointList()
+        var lastValue: CGFloat? = nil
+        var loop = 1
+        print("666: -------------point start-------------)")
+        lineList.traverse(from: target, forward: true) { (item: CircularIntervalPoint) in
+            print("666: \(item)")
+            if loop == 1 {
+                if begin == false {
+                    result.append(value: item.end, isStart: false, isEnd: true)
+                    lastValue = item.start
+                } else {
+                    result.append(value: item.start, isStart: true, isEnd: false)
+                    result.append(value: item.end, isStart: false, isEnd: false)
+                }
+            } else if loop == lineList.count {
+                if begin == true {
+                    result.append(value: item.start, isStart: false, isEnd: false)
+                    result.append(value: item.end, isStart: false, isEnd: true)
+                } else {
+                    result.append(value: item.start, isStart: false, isEnd: false)
+                    result.append(value: item.end, isStart: false, isEnd: false )
+                }
+            } else {
+                result.append(value: item.start, isStart: false, isEnd: false)
+                result.append(value: item.end, isStart: false, isEnd: false)
+            }
+            loop+=1
+            return true
+        }
+        if let _lastValue = lastValue {
+            result.append(value: _lastValue, isStart: true, isEnd: false)
+        }
+        print("666: -------------point end-------------)")
+        print("666: -------------start-------------)")
+        result.traverse { (item: CircularPoint) in
+            print("666: \(item)")
+            return true
+        }
+        print("666: -------------end-------------)")
+        return result
+    }
+    
+    private func modifyLineList(by pointList: CircularPointList, selectLine line: CircularIntervalPoint) {
+        var currentLine = line
+        print("2341: @@@@@@@@@@@@@@@@@旧值开始@@@@@@@@@@@@@@@@@")
+        currentLine = line
+        repeat {
+            print("2341: |__ \(currentLine)")
+            currentLine = currentLine.next!
+        } while currentLine != line
+        print("2341: @@@@@@@@@@@@@@@@@旧值结束@@@@@@@@@@@@@@@@@")
+        
+        currentLine = line
+        var index = 0
+        var startPoint = pointList.findFirstNode()!
+        var currentPoint = startPoint
+        repeat {
+            if index == 0 {
+                currentLine.start = currentPoint.value
+                if currentPoint.next!.isEnd {
+                    currentLine.end = currentPoint.next!.value
+                    currentPoint = currentPoint.next!.next!
+                } else {
+                    currentLine.end = currentPoint.previous!.value
+                    currentPoint = currentPoint.next!
+                }
+            } else {
+                currentLine.start = currentPoint.value
+                currentLine.end = currentPoint.next!.value
+                currentPoint = currentPoint.next!.next!
+            }
+            currentLine = currentLine.next!
+            index += 1
+        } while currentLine != line
+        print("2341: @@@@@@@@@@@@@@@@@新值开始@@@@@@@@@@@@@@@@@")
+        currentLine = line
+        repeat {
+            print("2341: |__ \(currentLine)")
+            currentLine = currentLine.next!
+        } while currentLine != line
+        print("2341: @@@@@@@@@@@@@@@@@新值结束@@@@@@@@@@@@@@@@@")
+    }
 
+    private func pointList2LineList(from pointList: CircularPointList) -> CircularIntervalPointList? {
+        print("777: ------------strat-------------")
+        pointList.traverse { (item: CircularPoint) in
+            print("777: \(item)")
+            return true
+        }
+        print("777: ------------end-------------")
+        let result = CircularIntervalPointList()
+        // 找到 isStart 为 true
+        guard let startPoint = pointList.findFirstNode() else {
+            print("777: 数据存在问题")
+            return nil
+        }
+        
+        guard let endPoint = pointList.findEndNode() else {
+            print("777: 数据存在问题")
+            return nil
+        }
+        
+        guard let nextPoint = startPoint.next else {
+            print("777: 数据存在问题")
+            return nil
+        }
+        
+        if endPoint != nextPoint {
+            let intervalPoint = CircularIntervalPoint(start: endPoint.value, end: startPoint.value)
+            result.append(node: intervalPoint)
+            nextPoint.isStart = true
+            pointList.remove(node: startPoint)
+            pointList.remove(node: endPoint)
+        }
+        
+        guard let newStartPoint = pointList.findFirstNode() else {
+            print("777: 数据存在问题")
+            return nil
+        }
+        
+        var currentPoint = newStartPoint
+        
+        let beginPoint = currentPoint
+        
+        repeat {
+            let start = currentPoint.value
+            currentPoint = currentPoint.next!
+            let end = currentPoint.value
+            currentPoint = currentPoint.next!
+            result.append(node: CircularIntervalPoint(start: start, end: end))
+        } while currentPoint != beginPoint
+        
+        print("777666: ----------begin recover----------")
+        result.traverse { (item: CircularIntervalPoint) in
+            print("777666: \(item)")
+            return true
+        }
+        print("777666: ----------end recover----------")
+        
+        return result
+    }
+    
+    private func determineMovementDirection(startAngle: Double, endAngle: Double) -> MovementDirection {
+        // 角度正规化到0到360度
+        let normalizedStartAngle = (startAngle.truncatingRemainder(dividingBy: 360) + 360).truncatingRemainder(dividingBy: 360)
+        let normalizedEndAngle = (endAngle.truncatingRemainder(dividingBy: 360) + 360).truncatingRemainder(dividingBy: 360)
+        
+        // 计算角度变化
+        var angleChange = normalizedEndAngle - normalizedStartAngle
+        
+        // 角度差调整为-180到180度之间，以便判断方向
+        if angleChange > 180 {
+            angleChange -= 360
+        } else if angleChange < -180 {
+            angleChange += 360
+        }
+        
+        // 根据角度变化判断方向
+        print("5555: StartAngle \(normalizedStartAngle) EndAngle \(endAngle)")
+        if angleChange > 0 {
+            print("5555: 顺时针")
+            return .clockwise
+        } else if angleChange < 0 {
+            print("5555: 逆时针")
+            return .counterclockwise
+        } else {
+            print("5555: 不动")
+            return .stationary
+        }
+    }
 }

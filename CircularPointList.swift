@@ -64,4 +64,90 @@ class CircularPointList: NSObject {
         head = nil
         count = 0 // 重置节点计数器
     }
+    
+    func removeNode(withValue value: CGFloat) {
+        guard let startNode = head else { return }
+        var currentNode: CircularPoint? = startNode
+        var previousNode: CircularPoint? = nil
+        
+        repeat {
+            if currentNode?.value == value {
+                if currentNode === head {
+                    if currentNode?.next === head {
+                        head = nil // 如果链表只有一个节点，将头节点置为nil
+                    } else {
+                        head = currentNode?.next
+                    }
+                }
+                
+                previousNode?.next = currentNode?.next
+                currentNode?.next?.previous = previousNode
+                
+                if currentNode?.next === startNode { // 如果是环形链表的最后一个节点
+                    head?.previous = previousNode
+                }
+                
+                if currentNode === currentNode?.next { // 如果链表只剩下一个节点，移除后将head置为nil
+                    head = nil
+                }
+                
+                count -= 1 // 更新节点计数器
+                break
+            }
+            
+            previousNode = currentNode
+            currentNode = currentNode?.next
+        } while currentNode !== startNode
+    }
+    
+    func remove(node: CircularPoint) {
+        // 如果链表为空或者节点是nil，直接返回
+        guard let _ = head, let _ = node.next, let _ = node.previous else { return }
+
+        // 处理链表只有一个节点的情况
+        if node === node.next {
+            head = nil
+        } else {
+            node.previous?.next = node.next
+            node.next?.previous = node.previous
+
+            // 如果移除的是头节点，更新头节点为下一个节点
+            if node === head {
+                head = node.next
+            }
+        }
+
+        // 清除移除节点的前后关系，以便Swift的ARC可以正确回收
+        node.next = nil
+        node.previous = nil
+
+        // 更新节点计数器
+        count -= 1
+    }
+
+
+    
+    func findFirstNode() -> CircularPoint? {
+        guard let startNode = head else { return nil }
+        var currentNode: CircularPoint? = startNode
+        repeat {
+            if currentNode?.isStart == true {
+                return currentNode
+            }
+            currentNode = currentNode?.next
+        } while currentNode !== startNode && currentNode != nil
+        return nil
+    }
+    
+    func findEndNode() -> CircularPoint? {
+        guard let startNode = head else { return nil }
+        var currentNode: CircularPoint? = startNode
+        repeat {
+            if currentNode?.isEnd == true {
+                return currentNode
+            }
+            currentNode = currentNode?.next
+        } while currentNode !== startNode && currentNode != nil
+        return nil
+    }
 }

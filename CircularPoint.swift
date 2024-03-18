@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CircularPoint: NSObject {
+class CircularPoint:NSObject {
     /// 值
     var value: CGFloat = CGFLOAT_MAX
     /// 是否是起点
@@ -18,5 +18,9 @@ class CircularPoint: NSObject {
     var next: CircularPoint?
     
     weak var previous: CircularPoint?
+    
+    override var description: String {
+        return "CircularPoint(value: \(value), isStart: \(isStart), isEnd: \(isEnd), hasPrevious: \(previous != nil), hasNext: \(next != nil)"
+    }
     
 }

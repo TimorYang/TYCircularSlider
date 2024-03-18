@@ -7,18 +7,10 @@
 
 import UIKit
 
-class CircularIntervalPoint: NSObject {
+class CircularIntervalPoint:NSObject {
     
-    var start: CGFloat = CGFLOAT_MAX {
-        didSet {
-            print("start: \(start)")
-        }
-    }
-    var end: CGFloat = CGFLOAT_MAX {
-        didSet {
-            print("end: \(end)")
-        }
-    }
+    var start: CGFloat = CGFLOAT_MAX
+    var end: CGFloat = CGFLOAT_MAX
     var startThumbCenter: CGPoint = CGPoint.zero
     var endThumbCenter: CGPoint = CGPoint.zero
     var next: CircularIntervalPoint?
@@ -28,6 +20,10 @@ class CircularIntervalPoint: NSObject {
     init(start: CGFloat, end: CGFloat) {
         self.start = start
         self.end = end
+    }
+    
+    override var description: String {
+        return "CircularIntervalPoint(start: \(start), end: \(end))"
     }
 }
 
