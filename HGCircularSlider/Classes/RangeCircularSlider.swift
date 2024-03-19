@@ -20,7 +20,7 @@ open class RangeCircularSlider: CircularSlider {
         var end: CGFloat? // 结束时间，使用整数表示（例如，秒数）
     }
     
-    public var timeRangeList: [TYCircularTimeRange]? {
+    open var timeRangeList: [TYCircularTimeRange]? {
         if midIntervalPoints.isEmpty {
             return [TYCircularTimeRange(start: startPointValue, end: endPointValue)]
         } else {

@@ -59,11 +59,11 @@ class ClockViewController: UIViewController {
     @IBAction func updateTexts(_ sender: RangeCircularSlider) {
         
         
-        if let timeRangeList = sender.timeRangeList {
-            for item: TYCircularTimeRange in timeRangeList {
-                print(item)
-            }
-        }
+//        if let timeRangeList = sender.timeRangeList {
+//            for item: TYCircularTimeRange in timeRangeList {
+//                print(item)
+//            }
+//        }
         adjustValue(value: &rangeCircularSlider.startPointValue)
         adjustValue(value: &rangeCircularSlider.endPointValue)
 
