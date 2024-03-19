@@ -14,6 +14,19 @@ import UIKit
  ValueChanged, EditingDidBegin and EditingDidEnd
  */
 open class RangeCircularSlider: CircularSlider {
+    
+    public struct TYCircularTimeRange {
+        var start: CGFloat? // 起始时间，使用整数表示（例如，秒数）
+        var end: CGFloat? // 结束时间，使用整数表示（例如，秒数）
+    }
+    
+    public var timeRangeList: [TYCircularTimeRange]? {
+        if midIntervalPoints.isEmpty {
+            return [TYCircularTimeRange(start: startPointValue, end: endPointValue)]
+        } else {
+            return intervalPointList2TimeRangeList(from: midIntervalPoints)
+        }
+    }
 
     public enum SelectedThumb {
         case startThumb
@@ -97,6 +110,16 @@ open class RangeCircularSlider: CircularSlider {
             if endPointValue > maximumValue {
                 endPointValue = maximumValue
             }
+        }
+    }
+    
+    /*
+     * Minimum distance between two points
+     * -1 is an invalid value
+     */
+    open var minDistance: CGFloat = -1 {
+        didSet {
+            assert(minDistance > 0, "Any number less than 0 is an invalid value")
         }
     }
     
@@ -193,6 +216,9 @@ open class RangeCircularSlider: CircularSlider {
      */
     fileprivate var endThumbCenter: CGPoint = CGPoint.zero
     
+    /**
+     * Interval point
+     */
     fileprivate var intervalThumbPoint: CircularIntervalPoint?
     
     /**
@@ -294,6 +320,7 @@ open class RangeCircularSlider: CircularSlider {
         } else {
             startThumbCenter = CGPoint.zero
             endThumbCenter = CGPoint.zero
+            var index = 1
             midIntervalPoints.traverse { (item: CircularIntervalPoint) in
                 // get start angle from start value
                 let startAngle = CircularSliderHelper.scaleToAngle(value: item.start, inInterval: interval) + CircularSliderHelper.circleInitialAngle
@@ -306,13 +333,21 @@ open class RangeCircularSlider: CircularSlider {
                 // end thumb
                 endThumbTintColor.setFill()
                 (isHighlighted == true && selectedThumb == .endThumb) ? endThumbStrokeHighlightedColor.setStroke() : endThumbStrokeColor.setStroke()
-                item.endThumbCenter = drawThumbAt(endAngle, with: endThumbImage, inContext: context)
+                if index == midIntervalPoints.count {
+                    item.endThumbCenter = drawThumbAt(endAngle, with: endThumbImage, inContext: context)
+                } else {
+                    item.endThumbCenter = drawThumbAt(endAngle, with: UIImage(named: "interval_end"), inContext: context)
+                }
                 
                 // start thumb
                 startThumbTintColor.setFill()
                 (isHighlighted == true && selectedThumb == .startThumb) ? startThumbStrokeHighlightedColor.setStroke() : startThumbStrokeColor.setStroke()
-                
-                item.startThumbCenter = drawThumbAt(startAngle, with: startThumbImage, inContext: context)
+                if index == 1 {
+                    item.startThumbCenter = drawThumbAt(startAngle, with: startThumbImage, inContext: context)
+                } else {
+                    item.startThumbCenter = drawThumbAt(startAngle, with: UIImage(named: "interval_start"), inContext: context)
+                }
+                index += 1
                 return true
             }
         }
@@ -345,16 +380,71 @@ open class RangeCircularSlider: CircularSlider {
         let startPoint = CGPoint(x: bounds.center.x, y: 0)
         switch selectedThumb {
         case .startThumb:
-            startPointValue = newValue(from: startPointValue, touch: touchPosition, start: startPoint)
+            let oldValue = startPointValue
+            let newValue = newValue(from: oldValue, touch: touchPosition, start: startPoint)
+            startPointValue = newValue
+            let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
+            let oldRadian = CircularSliderHelper.scaleToAngle(value: oldValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
+            let newRadian = CircularSliderHelper.scaleToAngle(value: newValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
+            let movementDirection = determineMovementDirection(oldRadian: oldRadian, newRadian: newRadian)
+            switch movementDirection {
+            case .clockwise:
+                /// 顺时针旋转
+                print("999111: ------------开始顺时针旋转------------")
+                let result = arePointsTouchingOnSameCircle(point1: startPointValue, point2: endPointValue)
+                if result {
+                    endPointValue = startPointValue + minDistance <= maximumValue ? startPointValue + minDistance : startPointValue + minDistance - maximumValue
+                }
+                print("999111: ------------结束顺时针旋转------------")
+            case .counterclockwise:
+                /// 逆时针旋转
+                print("999111: ------------开始逆时针旋转------------")
+                let result = arePointsTouchingOnSameCircle(point1: startPointValue, point2: endPointValue)
+                if result {
+                    endPointValue = startPointValue - minDistance >= 0 ? startPointValue - minDistance : startPointValue - minDistance + maximumValue
+                }
+                print("999111: ------------结束逆时针旋转------------")
+            case .stationary:
+                print("101010666: 点没有移动或在完全对称的位置")
+            }
         case .endThumb:
-            endPointValue = newValue(from: endPointValue, touch: touchPosition, start: startPoint)
+            let oldValue = endPointValue
+            let newValue = newValue(from: oldValue, touch: touchPosition, start: startPoint)
+            endPointValue = newValue
+            print("999222: end: \(endPointValue)")
+            let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
+            let oldRadian = CircularSliderHelper.scaleToAngle(value: oldValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
+            let newRadian = CircularSliderHelper.scaleToAngle(value: newValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
+            let movementDirection = determineMovementDirection(oldRadian: oldRadian, newRadian: newRadian)
+            switch movementDirection {
+            case .clockwise:
+                /// 顺时针旋转
+                print("999222: ------------开始顺时针旋转------------")
+                let result = arePointsTouchingOnSameCircle(point1: endPointValue, point2: startPointValue)
+                if result {
+                    startPointValue = endPointValue + minDistance <= maximumValue ? endPointValue + minDistance : endPointValue + minDistance - maximumValue
+                    print("999222: start: \(endPointValue) end: \(startPointValue)")
+                }
+                print("999222: ------------结束顺时针旋转------------")
+            case .counterclockwise:
+                /// 逆时针旋转
+                print("999222: ------------开始逆时针旋转------------")
+                let result = arePointsTouchingOnSameCircle(point1: endPointValue, point2: startPointValue)
+                if result {
+                    print("999222: 变更前 end: \(endPointValue) start: \(startPointValue)")
+                    startPointValue = endPointValue - minDistance >= 0 ? endPointValue - minDistance : endPointValue - minDistance + maximumValue
+                    print("999222: 变更后 end: \(endPointValue) start: \(startPointValue)")
+                }
+                print("999222: ------------结束逆时针旋转------------")
+            case .stationary:
+                print("999222: 点没有移动或在完全对称的位置")
+            }
         case .internalPointStart:
             if let _intervalThumbPoint = intervalThumbPoint {
                 let oldValue = _intervalThumbPoint.start
                 let newValue = newValue(from: _intervalThumbPoint.start, touch: touchPosition, start: startPoint)
                 _intervalThumbPoint.start = newValue
                 // 前面的点是否碰撞
-                let distance = 1.0 * 60 * 60
                 let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
                 let startAngle = CircularSliderHelper.scaleToAngle(value: oldValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
                 let endAngle = CircularSliderHelper.scaleToAngle(value: newValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
@@ -381,18 +471,18 @@ open class RangeCircularSlider: CircularSlider {
                         if isPointsInSameLine {
                             if let _previous = item.previous, loop != 1{
                                 print("222: loop: \(loop)")
-                                let result2 = arePointsTouchingOnSameCircle(point1: _previous.end, point2: item.start, touchRadius: radius, minAngle: 30.0)
+                                let result2 = arePointsTouchingOnSameCircle(point1: _previous.end, point2: item.start)
                                 print("222: 碰撞结果: \(result2) point1: \(_previous.end), point2: \(item.start)")
                                 if result2 {
-                                    item.start = _previous.end + distance <= maximumValue ? _previous.end + distance : _previous.end + distance - maximumValue
+                                    item.start = _previous.end + minDistance <= maximumValue ? _previous.end + minDistance : _previous.end + minDistance - maximumValue
                                 } else {
                                     return false
                                 }
                             }
-                            let result = arePointsTouchingOnSameCircle(point1: item.start, point2: item.end, touchRadius: radius, minAngle: 30.0)
+                            let result = arePointsTouchingOnSameCircle(point1: item.start, point2: item.end)
                             print("222: 碰撞结果: \(result) point1: \(item.start), point2: \(item.end)")
                             if result {
-                                item.end = item.start + distance <= maximumValue ? item.start + distance : item.start + distance - maximumValue
+                                item.end = item.start + minDistance <= maximumValue ? item.start + minDistance : item.start + minDistance - maximumValue
                             } else {
                                 return false
                             }
@@ -400,18 +490,18 @@ open class RangeCircularSlider: CircularSlider {
                         } else {
                             if let _previous = item.previous {
                                 print("222: previous: \(_previous)")
-                                let result = arePointsTouchingOnSameCircle(point1: _previous.end, point2: item.start, touchRadius: radius, minAngle: 30.0)
+                                let result = arePointsTouchingOnSameCircle(point1: _previous.end, point2: item.start)
                                 print("222: 碰撞结果: \(result)")
                                 if result {
-                                    item.start = _previous.end + distance < maximumValue ? _previous.end + distance : _previous.end + distance - maximumValue
+                                    item.start = _previous.end + minDistance < maximumValue ? _previous.end + minDistance : _previous.end + minDistance - maximumValue
                                 } else {
                                     return false
                                 }
                                 
-                                let result2 = arePointsTouchingOnSameCircle(point1: item.start, point2: item.end, touchRadius: radius, minAngle: 30.0)
+                                let result2 = arePointsTouchingOnSameCircle(point1: item.start, point2: item.end)
                                 print("222: 碰撞结果: \(result2)")
                                 if result2 {
-                                    item.end = item.start + distance < maximumValue ? item.start + distance : item.start + distance - maximumValue
+                                    item.end = item.start + minDistance < maximumValue ? item.start + minDistance : item.start + minDistance - maximumValue
                                 } else {
                                     return false
                                 }
@@ -438,10 +528,10 @@ open class RangeCircularSlider: CircularSlider {
                         print("333: currentPoint: \(currentPoint)")
                         if loop == 0 {
                             if let _previous = currentPoint.previous {
-                                let result2 = arePointsTouchingOnSameCircle(point1: currentPoint.start, point2: _previous.end, touchRadius: radius, minAngle: 30.0)
+                                let result2 = arePointsTouchingOnSameCircle(point1: currentPoint.start, point2: _previous.end)
                                 print("333: 碰撞结果: \(result2), point1: \(currentPoint), point2: \(_previous)")
                                 if result2 {
-                                    _previous.end = currentPoint.start - distance > 0 ? currentPoint.start - distance : maximumValue - distance + currentPoint.start
+                                    _previous.end = currentPoint.start - minDistance > 0 ? currentPoint.start - minDistance : maximumValue - minDistance + currentPoint.start
                                 } else {
                                     stop = true
                                 }
@@ -449,15 +539,15 @@ open class RangeCircularSlider: CircularSlider {
                                 stop = true
                             }
                         } else {
-                            let result = arePointsTouchingOnSameCircle(point1: currentPoint.end, point2: currentPoint.start, touchRadius: radius, minAngle: 30.0)
+                            let result = arePointsTouchingOnSameCircle(point1: currentPoint.end, point2: currentPoint.start)
                             print("333: 碰撞结果: \(result), point1: \(currentPoint), point2: \(currentPoint)")
                             if result {
-                                currentPoint.start = currentPoint.end - distance >= 0 ? currentPoint.end - distance : maximumValue - distance + currentPoint.end
+                                currentPoint.start = currentPoint.end - minDistance >= 0 ? currentPoint.end - minDistance : maximumValue - minDistance + currentPoint.end
                                 if let _previous = currentPoint.previous {
-                                    let result = arePointsTouchingOnSameCircle(point1: currentPoint.start, point2: _previous.end, touchRadius: radius, minAngle: 30.0)
+                                    let result = arePointsTouchingOnSameCircle(point1: currentPoint.start, point2: _previous.end)
                                     print("333: 碰撞结果: \(result), point1: \(currentPoint), point2: \(_previous)")
                                     if result {
-                                        _previous.end = currentPoint.start - distance >= 0 ? currentPoint.start - distance : maximumValue - distance + currentPoint.start
+                                        _previous.end = currentPoint.start - minDistance >= 0 ? currentPoint.start - minDistance : maximumValue - minDistance + currentPoint.start
                                     } else {
                                         stop = true
                                     }
@@ -475,56 +565,6 @@ open class RangeCircularSlider: CircularSlider {
                         }
                         loop+=1
                     } while currentPoint != startPoint && !stop
-                    
-//
-//                    midIntervalPoints.traverse(from: _intervalThumbPoint, forward: false) { (item: CircularIntervalPoint) in
-//                        print("333: isPointsInSameLine: \(isPointsInSameLine)")
-//                        print("333: currentPoint: \(item)")
-//                        loop+=1
-//                        if isPointsInSameLine {
-//                            let result = arePointsTouchingOnSameCircle(point1: item.end, point2: item.start, touchRadius: radius, minAngle: 30.0)
-//                            print("333: 碰撞结果: \(result), point1: \(item.end), point2: \(item.start)")
-//                            if result {
-//                                item.start = item.end - distance > 0 ? item.end - distance : maximumValue - distance + item.end
-//                            } else {
-//                                return false
-//                            }
-//                            if let _previous = item.previous {
-//                                print("333: nextPoint: \(_previous)")
-//                                let result2 = arePointsTouchingOnSameCircle(point1: item.start, point2: _previous.end, touchRadius: radius, minAngle: 30.0)
-//                                print("333: 碰撞结果: \(result2)")
-//                                if result2 {
-//                                    _previous.end = item.start - distance > 0 ? item.start - distance : maximumValue - distance + item.start
-//                                } else {
-//                                    return false
-//                                }
-//                            }
-//                        } else {
-//                            if let _previousPoint = item.previous {
-//                                print("333: previousPoint: \(_previousPoint)")
-//                                let result = arePointsTouchingOnSameCircle(point1: item.start, point2: _previousPoint.end, touchRadius: radius, minAngle: 30.0)
-//                                print("333: 碰撞结果: \(result)")
-//                                if result {
-//                                    _previousPoint.end = item.start - distance >= 0 ? item.start - distance : maximumValue - distance + item.start
-//                                } else {
-//                                    return false
-//                                }
-//                                
-//                                if loop != 1 {
-//                                    print("3333: loop: \(loop)")
-//                                    let result2 = arePointsTouchingOnSameCircle(point1: item.end, point2: item.start, touchRadius: radius, minAngle: 30.0)
-//                                    print("333: 碰撞结果: \(result2)")
-//                                    if result2 {
-//                                        item.start = item.end - distance >= 0 ? item.end - distance : maximumValue - distance + item.end
-//                                    } else {
-//                                        return false
-//                                    }
-//                                }
-//                            }
-//                        }
-//                        isPointsInSameLine = !isPointsInSameLine
-//                        return true
-//                    }
                     print("333: ------------ 结束逆时针方向 ------------")
                 } else {
                     print("222333: 点没有移动或在完全对称的位置, distance: \(distance)")
@@ -537,12 +577,11 @@ open class RangeCircularSlider: CircularSlider {
                 let oldValue = _intervalThumbPoint.end
                 let newValue = newValue(from: _intervalThumbPoint.end, touch: touchPosition, start: startPoint)
                 _intervalThumbPoint.end = newValue
-                let distance = 1.0 * 60 * 60
                 let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
-                let startAngle = CircularSliderHelper.scaleToAngle(value: oldValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
-                let endAngle = CircularSliderHelper.scaleToAngle(value: newValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
-                print("123123: startAngle: \(startAngle), endAngle: \(endAngle)")
-                let movementDirection = determineMovementDirection(startAngle: startAngle, endAngle: endAngle)
+                let oldRadian = CircularSliderHelper.scaleToAngle(value: oldValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
+                let newRadian = CircularSliderHelper.scaleToAngle(value: newValue, inInterval: interval) + CircularSliderHelper.circleInitialAngle
+                print("123123: startAngle: \(oldRadian), endAngle: \(newRadian)")
+                let movementDirection = determineMovementDirection(oldRadian: oldRadian, newRadian: newRadian)
                 let pointList = lineList2PointList(from: midIntervalPoints, startPoint: _intervalThumbPoint, isBegin: false)
                 switch movementDirection {
                 case .clockwise:
@@ -553,10 +592,10 @@ open class RangeCircularSlider: CircularSlider {
                             var currentPoint = _firstPoint
                             repeat {
                                 let nextPoint = currentPoint.next!
-                                let result = arePointsTouchingOnSameCircle(point1: currentPoint.value, point2: nextPoint.value, touchRadius: radius, minAngle: 30.0)
+                                let result = arePointsTouchingOnSameCircle(point1: currentPoint.value, point2: nextPoint.value)
                                 print("888666: currentPoint: \(currentPoint), nextPoint: \(nextPoint), 碰撞: \(result)")
                                 if result {
-                                    nextPoint.value = currentPoint.value + distance <= maximumValue ? currentPoint.value + distance : currentPoint.value + distance - maximumValue
+                                    nextPoint.value = currentPoint.value + minDistance <= maximumValue ? currentPoint.value + minDistance : currentPoint.value + minDistance - maximumValue
                                     print("888666: new currentPoint: \(currentPoint)")
                                 } else {
                                     print("888666: 跳出循环")
@@ -581,9 +620,9 @@ open class RangeCircularSlider: CircularSlider {
                         repeat {
                             print("2341: |__ \(currentPoint)")
                             let previousPoint = currentPoint.previous!
-                            let result = arePointsTouchingOnSameCircle(point1: currentPoint.value, point2: previousPoint.value, touchRadius: radius, minAngle: 30.0)
+                            let result = arePointsTouchingOnSameCircle(point1: currentPoint.value, point2: previousPoint.value)
                             if result {
-                                previousPoint.value = currentPoint.value >= distance ? currentPoint.value - distance : currentPoint.value - distance + maximumValue
+                                previousPoint.value = currentPoint.value >= minDistance ? currentPoint.value - minDistance : currentPoint.value - minDistance + maximumValue
                             } else {
                                 break
                             }
@@ -651,6 +690,17 @@ open class RangeCircularSlider: CircularSlider {
         }
     }
     
+    func arePointsTouchingOnSameCircle(point1: CGFloat, point2: CGFloat) -> Bool {
+        if minDistance > 0 {
+            let interval = Interval(min: minimumValue, max: maximumValue, rounds: numberOfRounds)
+            let minRadian = CircularSliderHelper.scaleToAngle(value: minDistance, inInterval: interval)
+            let minAngle = CircularSliderHelper.degrees(fromRadians: minRadian)
+            return arePointsTouchingOnSameCircle(point1: point1, point2: point2, touchRadius: radius, minAngle: minAngle)
+        } else {
+            return false
+        }
+    }
+    
     /// 判断两个同圆上的点是否触碰
     /// - Parameters:
     ///   - angle1: 第一个点的角度位置（单位：度）
@@ -680,9 +730,18 @@ open class RangeCircularSlider: CircularSlider {
                 if result {
                     let startTime = TimeInterval(startPointValue)
                     let endTime = TimeInterval(endPointValue)
-                    let offset = endTime - startTime
+                    let offset = endTime > startTime ? endTime - startTime : maximumValue - startTime + endTime
                     if offset >= 3 * 60 * 60 {
-                        let midValue = (startPointValue + endPointValue) * 0.5
+                        var midValue = CGFLOAT_MAX
+                        if startPointValue < endPointValue {
+                            midValue = (startPointValue + endPointValue) * 0.5
+                        } else {
+                            let halfDistance = (maximumValue - startPointValue + endPointValue) * 0.5
+                            midValue = startPointValue + halfDistance <= maximumValue ? startPointValue + halfDistance : endPointValue - halfDistance
+                        }
+                        if midValue == CGFLOAT_MAX {
+                            return
+                        }
                         let unitValue = 60.0
                         let midStartValue = midValue - 30 * unitValue
                         let midEndValue = midValue + 30 * unitValue
@@ -715,8 +774,18 @@ open class RangeCircularSlider: CircularSlider {
                     }
                 }
                 if let _selectedIntervalPoint = selectedIntervalPoint {
-                    let midValue = (_selectedIntervalPoint.start + _selectedIntervalPoint.end) * 0.5
                     let unitValue = 60.0
+                    // 判断起点和终点
+                    var midValue = CGFLOAT_MAX
+                    if _selectedIntervalPoint.start < _selectedIntervalPoint.end {
+                        midValue = (_selectedIntervalPoint.start + _selectedIntervalPoint.end) * 0.5
+                    } else {
+                        let halfDistance = (maximumValue - _selectedIntervalPoint.start + _selectedIntervalPoint.end) * 0.5
+                        midValue = _selectedIntervalPoint.start + halfDistance <= maximumValue ? _selectedIntervalPoint.start + halfDistance : _selectedIntervalPoint.end - halfDistance
+                    }
+                    if midValue == CGFLOAT_MAX {
+                        return
+                    }
                     let midStartValue = midValue - 30 * unitValue
                     let midEndValue = midValue + 30 * unitValue
                     let endIntervalPoint = CircularIntervalPoint(start: midEndValue, end: _selectedIntervalPoint.end)
@@ -903,13 +972,13 @@ open class RangeCircularSlider: CircularSlider {
         return result
     }
     
-    private func determineMovementDirection(startAngle: Double, endAngle: Double) -> MovementDirection {
+    private func determineMovementDirection(oldRadian: Double, newRadian: Double) -> MovementDirection {
         // 角度正规化到0到360度
-        let normalizedStartAngle = (startAngle.truncatingRemainder(dividingBy: 360) + 360).truncatingRemainder(dividingBy: 360)
-        let normalizedEndAngle = (endAngle.truncatingRemainder(dividingBy: 360) + 360).truncatingRemainder(dividingBy: 360)
+        let oldAngle = CircularSliderHelper.degrees(fromRadians: oldRadian)
+        let newAngle = CircularSliderHelper.degrees(fromRadians: newRadian)
         
         // 计算角度变化
-        var angleChange = normalizedEndAngle - normalizedStartAngle
+        var angleChange = newAngle - oldAngle
         
         // 角度差调整为-180到180度之间，以便判断方向
         if angleChange > 180 {
@@ -919,7 +988,6 @@ open class RangeCircularSlider: CircularSlider {
         }
         
         // 根据角度变化判断方向
-        print("5555: StartAngle \(normalizedStartAngle) EndAngle \(endAngle)")
         if angleChange > 0 {
             print("5555: 顺时针")
             return .clockwise
@@ -930,5 +998,17 @@ open class RangeCircularSlider: CircularSlider {
             print("5555: 不动")
             return .stationary
         }
+    }
+    
+    private func intervalPointList2TimeRangeList(from pointList: CircularIntervalPointList) -> [TYCircularTimeRange] {
+        var list = [TYCircularTimeRange]()
+        pointList.traverse { (item: CircularIntervalPoint) in
+            var tmp = TYCircularTimeRange()
+            tmp.start = item.start
+            tmp.end = item.end
+            list.append(tmp)
+            return true
+        }
+        return list
     }
 }

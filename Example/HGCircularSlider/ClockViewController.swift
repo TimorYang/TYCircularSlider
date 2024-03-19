@@ -34,14 +34,19 @@ class ClockViewController: UIViewController {
         super.viewDidLoad()
         
         // setup O'clock
-        rangeCircularSlider.startThumbImage = UIImage(named: "Bedtime")
-        rangeCircularSlider.endThumbImage = UIImage(named: "Wake")
+        rangeCircularSlider.startThumbImage = UIImage(named: "start")
+        rangeCircularSlider.endThumbImage = UIImage(named: "end")
         
         let dayInSeconds = 24 * 60 * 60
         rangeCircularSlider.maximumValue = CGFloat(dayInSeconds)
         
         rangeCircularSlider.startPointValue = 1 * 60 * 60
         rangeCircularSlider.endPointValue = 8 * 60 * 60
+        rangeCircularSlider.lineWidth = 26
+        rangeCircularSlider.backtrackLineWidth = 36
+        rangeCircularSlider.trackFillColor = UIColor(red: 0.21, green: 0.67, blue: 0.23, alpha: 0.4500)
+        rangeCircularSlider.trackColor = UIColor(red: 0.89, green: 0.89, blue: 0.89, alpha: 1)
+        rangeCircularSlider.minDistance = 1 * 60 * 60
 
         updateTexts(rangeCircularSlider)
     }
@@ -51,8 +56,14 @@ class ClockViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func updateTexts(_ sender: AnyObject) {
+    @IBAction func updateTexts(_ sender: RangeCircularSlider) {
         
+        
+        if let timeRangeList = sender.timeRangeList {
+            for item: TYCircularTimeRange in timeRangeList {
+                print(item)
+            }
+        }
         adjustValue(value: &rangeCircularSlider.startPointValue)
         adjustValue(value: &rangeCircularSlider.endPointValue)
 

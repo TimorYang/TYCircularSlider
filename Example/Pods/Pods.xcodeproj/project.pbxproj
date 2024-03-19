@@ -10,10 +10,6 @@
 		06006C6E195EB0A51A250332665ACA4F /* CircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61EDE857B41D269C928E62F28E61C50 /* CircularSlider.swift */; };
 		2B977ABC04A401509CD0D4F82476C4E9 /* RangeCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92241148BB9ABE188BD208C9377B965E /* RangeCircularSlider.swift */; };
 		2F754E5160634EE8F1CBB37E0344D72B /* Pods-HGCircularSlider_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FC561DDFE28687FAB5EE8B81912CF6 /* Pods-HGCircularSlider_Example-dummy.m */; };
-		3B770B102BA29FBD0013A6DC /* CircularIntervalPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B770B0F2BA29FBD0013A6DC /* CircularIntervalPoint.swift */; };
-		3B770B122BA2C2D30013A6DC /* CircularIntervalPointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B770B112BA2C2D30013A6DC /* CircularIntervalPointList.swift */; };
-		3B770B142BA5711A0013A6DC /* CircularPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B770B132BA5711A0013A6DC /* CircularPoint.swift */; };
-		3B770B162BA571B70013A6DC /* CircularPointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B770B152BA571B70013A6DC /* CircularPointList.swift */; };
 		3C478F5F095C98E740D3245CF551FDF4 /* Pods-HGCircularSlider_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0531D278A24CD38372CAB079C2BCC3CC /* Pods-HGCircularSlider_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40899B669ADBCE3CCFB24AA17636D309 /* Pods-HGCircularSlider_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 335044A8F24C8F65A1C993D9DF2B659F /* Pods-HGCircularSlider_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		579503B9011E13DE52F116F730BBC6A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -52,10 +48,6 @@
 		2A9F8906F31F255CFAC8C955C0AD0EB8 /* Pods-HGCircularSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HGCircularSlider_Example.modulemap"; sourceTree = "<group>"; };
 		335044A8F24C8F65A1C993D9DF2B659F /* Pods-HGCircularSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HGCircularSlider_Example-umbrella.h"; sourceTree = "<group>"; };
 		36EAF1B486E061BAB91FA40F141FA206 /* HGCircularSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGCircularSlider.release.xcconfig; sourceTree = "<group>"; };
-		3B770B0F2BA29FBD0013A6DC /* CircularIntervalPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularIntervalPoint.swift; sourceTree = "<group>"; };
-		3B770B112BA2C2D30013A6DC /* CircularIntervalPointList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularIntervalPointList.swift; sourceTree = "<group>"; };
-		3B770B132BA5711A0013A6DC /* CircularPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularPoint.swift; sourceTree = "<group>"; };
-		3B770B152BA571B70013A6DC /* CircularPointList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularPointList.swift; sourceTree = "<group>"; };
 		40A9E1BF9BD7E69EC9050CD12524CA6A /* Pods-HGCircularSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HGCircularSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4228D6D3CEDCA8624C7F5A1F8225A29B /* Pods-HGCircularSlider_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Example-Info.plist"; sourceTree = "<group>"; };
 		4926A9DAFEDBBFB51FC2FA92126C7032 /* Pods-HGCircularSlider_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -68,18 +60,18 @@
 		81FC561DDFE28687FAB5EE8B81912CF6 /* Pods-HGCircularSlider_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HGCircularSlider_Example-dummy.m"; sourceTree = "<group>"; };
 		8CD6A4F5CE27BAFFC31E4878DDB01BDD /* Pods-HGCircularSlider_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		8DD7A43D30435D6DA0EE82DFADEAE606 /* HGCircularSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGCircularSlider.debug.xcconfig; sourceTree = "<group>"; };
-		8F5AC9D48F966913B1416C9E413684F0 /* HGCircularSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HGCircularSlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8F5AC9D48F966913B1416C9E413684F0 /* HGCircularSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HGCircularSlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		912406725FA30057CA11E94A42405766 /* Pods-HGCircularSlider_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HGCircularSlider_Example"; path = Pods_HGCircularSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92241148BB9ABE188BD208C9377B965E /* RangeCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeCircularSlider.swift; path = HGCircularSlider/Classes/RangeCircularSlider.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3CD69074F507B3569D5B513D27549F8 /* Pods-HGCircularSlider_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HGCircularSlider_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ACC59DE4166662D5193706D55D58654F /* CircularSlider+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CircularSlider+Draw.swift"; path = "HGCircularSlider/Classes/CircularSlider+Draw.swift"; sourceTree = "<group>"; };
 		AD5CD0A8C4018C13A98F9B5DE7379EFA /* HGCircularSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HGCircularSlider-Info.plist"; sourceTree = "<group>"; };
 		D00BE4A50F8F67B64986BE1D53E035E4 /* MidPointCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MidPointCircularSlider.swift; path = HGCircularSlider/Classes/MidPointCircularSlider.swift; sourceTree = "<group>"; };
 		DA1EA90A0DC940741BB9510A83433F9E /* Pods-HGCircularSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HGCircularSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HGCircularSlider; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2032FED1E4D7615084B8AF735FD6BCB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		E5336DC102D572A6A3E123844E392367 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E2032FED1E4D7615084B8AF735FD6BCB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E5336DC102D572A6A3E123844E392367 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E61EDE857B41D269C928E62F28E61C50 /* CircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSlider.swift; path = HGCircularSlider/Classes/CircularSlider.swift; sourceTree = "<group>"; };
 		E89E5B545A6604882E250A1E69959933 /* Pods-HGCircularSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HGCircularSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE518C00548EFDBA99AD84B7481F6FDD /* CircularSliderHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CircularSliderHelper.swift; path = HGCircularSlider/Classes/CircularSliderHelper.swift; sourceTree = "<group>"; };
@@ -161,10 +153,6 @@
 				92241148BB9ABE188BD208C9377B965E /* RangeCircularSlider.swift */,
 				A85B25FEB0E5FBBF6A465E26BBA2FA68 /* Pod */,
 				793F8C1ACEC53FAAA00F17346DC4F1EB /* Support Files */,
-				3B770B0F2BA29FBD0013A6DC /* CircularIntervalPoint.swift */,
-				3B770B112BA2C2D30013A6DC /* CircularIntervalPointList.swift */,
-				3B770B132BA5711A0013A6DC /* CircularPoint.swift */,
-				3B770B152BA571B70013A6DC /* CircularPointList.swift */,
 			);
 			name = HGCircularSlider;
 			path = ../..;
@@ -391,15 +379,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B770B142BA5711A0013A6DC /* CircularPoint.swift in Sources */,
 				06006C6E195EB0A51A250332665ACA4F /* CircularSlider.swift in Sources */,
 				8B268F3FAD2E5313E21C74188B0064DD /* CircularSlider+Draw.swift in Sources */,
-				3B770B122BA2C2D30013A6DC /* CircularIntervalPointList.swift in Sources */,
 				F94483D7B00542CCD96FA7C2617B763F /* CircularSliderHelper.swift in Sources */,
 				7D8B00690681A72CABE9C8FE67302EFA /* HGCircularSlider-dummy.m in Sources */,
 				F467FE98C3E2596098ABAC171B5C0D44 /* MidPointCircularSlider.swift in Sources */,
-				3B770B162BA571B70013A6DC /* CircularPointList.swift in Sources */,
-				3B770B102BA29FBD0013A6DC /* CircularIntervalPoint.swift in Sources */,
 				2B977ABC04A401509CD0D4F82476C4E9 /* RangeCircularSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,7 +647,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
