@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:HGCircularSlider.xcodeproj">
+      location = "group:/Users/teemoyang/Documents/Study/HGCircularSlider/Example/TYCircularSlider.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

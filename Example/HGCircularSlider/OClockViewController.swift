@@ -11,8 +11,8 @@ import HGCircularSlider
 
 class OClockViewController: UIViewController {
     
-    @IBOutlet weak var minutesCircularSlider: CircularSlider!
-    @IBOutlet weak var hoursCircularSlider: CircularSlider!
+    @IBOutlet weak var minutesCircularSlider: TYCircularSlider!
+    @IBOutlet weak var hoursCircularSlider: TYCircularSlider!
     
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var minutesLabel: UILabel!

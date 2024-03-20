@@ -1,5 +1,5 @@
 //
-//  CircularIntervalPointList.swift
+//  TYCircularIntervalPointList.swift
 //  HGCircularSlider
 //
 //  Created by TeemoYang on 2024/3/14.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class CircularIntervalPointList: NSObject {
-    private var head: CircularIntervalPoint?
+class TYCircularIntervalPointList: NSObject {
+    private var head: TYCircularIntervalPoint?
     private var nodeCount = 0  // 维护链表中的节点数
     
     // 判断链表是否为空
@@ -17,7 +17,7 @@ class CircularIntervalPointList: NSObject {
     }
     
     // 返回链表的头节点
-    var first: CircularIntervalPoint? {
+    var first: TYCircularIntervalPoint? {
         return head
     }
     
@@ -27,7 +27,7 @@ class CircularIntervalPointList: NSObject {
     }
     
     // 添加新元素到链表
-    func append(node: CircularIntervalPoint) {
+    func append(node: TYCircularIntervalPoint) {
         guard let headNode = head else {
             head = node
             node.next = node
@@ -44,7 +44,7 @@ class CircularIntervalPointList: NSObject {
         nodeCount += 1  // 添加节点后，节点数增加
     }
     
-    func insert(node newNode: CircularIntervalPoint, afterNode: CircularIntervalPoint) {
+    func insert(node newNode: TYCircularIntervalPoint, afterNode: TYCircularIntervalPoint) {
         let nextNode = afterNode.next
         newNode.next = nextNode
         newNode.previous = afterNode
@@ -54,7 +54,7 @@ class CircularIntervalPointList: NSObject {
     }
     
     // 删除节点
-    func remove(node: CircularIntervalPoint) {
+    func remove(node: TYCircularIntervalPoint) {
         guard let nextNode = node.next, let prevNode = node.previous, nextNode != node else {
             head = nil
             nodeCount = 0  // 如果链表变为空，节点数重置为0
@@ -74,7 +74,7 @@ class CircularIntervalPointList: NSObject {
     
     func remove(start: CGFloat, end: CGFloat) {
         var currentNode = head
-        var nodesToRemove: [CircularIntervalPoint] = []
+        var nodesToRemove: [TYCircularIntervalPoint] = []
 
         // 首先，遍历链表找到所有需要删除的节点
         repeat {
@@ -91,7 +91,7 @@ class CircularIntervalPointList: NSObject {
     }
 
     // 查找节点
-    func findNode(withStart value: CGFloat) -> CircularIntervalPoint? {
+    func findNode(withStart value: CGFloat) -> TYCircularIntervalPoint? {
         var currentNode = head
         repeat {
             if currentNode?.start == value {
@@ -102,7 +102,7 @@ class CircularIntervalPointList: NSObject {
         return nil
     }
     
-    func findNode(withEnd value: CGFloat) -> CircularIntervalPoint? {
+    func findNode(withEnd value: CGFloat) -> TYCircularIntervalPoint? {
         var currentNode = head
         repeat {
             if currentNode?.end == value {
@@ -114,7 +114,7 @@ class CircularIntervalPointList: NSObject {
     }
     
     // 遍历链表，执行闭包操作
-    func traverse(_ body: (CircularIntervalPoint) -> Bool) {
+    func traverse(_ body: (TYCircularIntervalPoint) -> Bool) {
         var node = head
         repeat {
             if let currentNode = node {
@@ -127,8 +127,8 @@ class CircularIntervalPointList: NSObject {
     }
     
     // 从指定节点开始遍历链表
-    func traverse(from startNode: CircularIntervalPoint, forward: Bool, _ body: (CircularIntervalPoint) -> Bool) {
-        var currentNode: CircularIntervalPoint? = startNode
+    func traverse(from startNode: TYCircularIntervalPoint, forward: Bool, _ body: (TYCircularIntervalPoint) -> Bool) {
+        var currentNode: TYCircularIntervalPoint? = startNode
         repeat {
             guard let current = currentNode else { break }
             

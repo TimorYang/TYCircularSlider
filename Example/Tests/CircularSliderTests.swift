@@ -13,7 +13,7 @@ class CircularSliderTests: XCTestCase {
     
     func testEndPointPositionWithZeroAsInitialValueAnd90DegreesAsTouchPosition() {
         // Given
-        let circularSlider = CircularSlider(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let circularSlider = TYCircularSlider(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         let startPosition = CGPoint(x: 25, y: 0)
         circularSlider.minimumValue = 0
         circularSlider.maximumValue = 100
@@ -30,7 +30,7 @@ class CircularSliderTests: XCTestCase {
     
     func testEndPointPositionWithValueGratherThanZeroAsInitialValueAnd90DegreesAsTouchPosition() {
         // Given
-        let circularSlider = CircularSlider(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let circularSlider = TYCircularSlider(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         let startPosition = CGPoint(x: 25, y: 0)
         circularSlider.minimumValue = 5
         circularSlider.maximumValue = 25
@@ -47,7 +47,7 @@ class CircularSliderTests: XCTestCase {
     
     func testndPointPositionWithValueGratherThanZeroAsInitialValueAnd180DegreesAsTouchPosition() {
         // Given
-        let circularSlider = CircularSlider(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let circularSlider = TYCircularSlider(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         let startPosition = CGPoint(x: 25, y: 0)
         circularSlider.minimumValue = 5
         circularSlider.maximumValue = 25
@@ -64,7 +64,7 @@ class CircularSliderTests: XCTestCase {
     
     func testndPointPositionWithValueGratherThanZeroAsInitialValueAnd270DegreesAsTouchPosition() {
         // Given
-        let circularSlider = CircularSlider(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let circularSlider = TYCircularSlider(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         let startPosition = CGPoint(x: 25, y: 0)
         circularSlider.minimumValue = 5
         circularSlider.maximumValue = 25
@@ -81,7 +81,7 @@ class CircularSliderTests: XCTestCase {
     
     func testndPointPositionWithValueGratherThanZeroAsInitialValueAnd360DegreesAsTouchPosition() {
         // Given
-        let circularSlider = CircularSlider(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let circularSlider = TYCircularSlider(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
         let startPosition = CGPoint(x: 25, y: 0)
         circularSlider.minimumValue = 5
         circularSlider.maximumValue = 25

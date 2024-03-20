@@ -1,5 +1,5 @@
 //
-//  CircularSlider.swift
+//  TYCircularSlider.swift
 //  Pods
 //
 //  Created by Hamza Ghazouani on 19/10/2016.
@@ -15,7 +15,7 @@ import UIKit
  * ValueChanged, EditingDidBegin and EditingDidEnd
  */
 @IBDesignable
-open class CircularSlider: UIControl {
+open class TYCircularSlider: UIControl {
     
     // MARK: Changing the Slider’s Appearance
     

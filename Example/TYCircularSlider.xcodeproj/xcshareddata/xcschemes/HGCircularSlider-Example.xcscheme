@@ -17,7 +17,7 @@
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
                BuildableName = "HGCircularSlider_Example.app"
                BlueprintName = "HGCircularSlider_Example"
-               ReferencedContainer = "container:HGCircularSlider.xcodeproj">
+               ReferencedContainer = "container:TYCircularSlider.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "HGCircularSlider_Tests.xctest"
                BlueprintName = "HGCircularSlider_Tests"
-               ReferencedContainer = "container:HGCircularSlider.xcodeproj">
+               ReferencedContainer = "container:TYCircularSlider.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,7 +47,7 @@
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "HGCircularSlider_Example.app"
             BlueprintName = "HGCircularSlider_Example"
-            ReferencedContainer = "container:HGCircularSlider.xcodeproj">
+            ReferencedContainer = "container:TYCircularSlider.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <Testables>
@@ -58,7 +58,7 @@
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "HGCircularSlider_Tests.xctest"
                BlueprintName = "HGCircularSlider_Tests"
-               ReferencedContainer = "container:HGCircularSlider.xcodeproj">
+               ReferencedContainer = "container:TYCircularSlider.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -80,7 +80,7 @@
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "HGCircularSlider_Example.app"
             BlueprintName = "HGCircularSlider_Example"
-            ReferencedContainer = "container:HGCircularSlider.xcodeproj">
+            ReferencedContainer = "container:TYCircularSlider.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "HGCircularSlider_Example.app"
             BlueprintName = "HGCircularSlider_Example"
-            ReferencedContainer = "container:HGCircularSlider.xcodeproj">
+            ReferencedContainer = "container:TYCircularSlider.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

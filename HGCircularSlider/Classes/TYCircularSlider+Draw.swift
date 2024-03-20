@@ -1,5 +1,5 @@
 //
-//  CircularSlider+Draw.swift
+//  TYCircularSlider+Draw.swift
 //  Pods
 //
 //  Created by Hamza Ghazouani on 21/10/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension CircularSlider {
+extension TYCircularSlider {
     
     /**
      Draw arc with stroke mode (Stroke) or Disk (Fill) or both (FillStroke) mode
@@ -68,7 +68,7 @@ extension CircularSlider {
 
         let circle = Circle(origin: bounds.center, radius: self.radius)
         let sliderArc = Arc(circle: circle, startAngle: CircularSliderHelper.circleMinValue, endAngle: CircularSliderHelper.circleMaxValue)
-        CircularSlider.drawArc(withArc: sliderArc, lineWidth: backtrackLineWidth, inContext: context)
+        TYCircularSlider.drawArc(withArc: sliderArc, lineWidth: backtrackLineWidth, inContext: context)
     }
 
     /// draw Filled arc between start an end angles
@@ -80,9 +80,9 @@ extension CircularSlider {
         let arc = Arc(circle: circle, startAngle: startAngle, endAngle: endAngle)
         
         // fill Arc
-        CircularSlider.drawDisk(withArc: arc, inContext: context)
+        TYCircularSlider.drawDisk(withArc: arc, inContext: context)
         // stroke Arc
-        CircularSlider.drawArc(withArc: arc, lineWidth: lineWidth, mode: .stroke, inContext: context)
+        TYCircularSlider.drawArc(withArc: arc, lineWidth: lineWidth, mode: .stroke, inContext: context)
     }
 
     internal func drawShadowArc(fromAngle startAngle: CGFloat, toAngle endAngle: CGFloat, inContext context: CGContext) {
@@ -93,7 +93,7 @@ extension CircularSlider {
         let arc = Arc(circle: circle, startAngle: startAngle, endAngle: endAngle)
 
         // stroke Arc
-        CircularSlider.drawArc(withArc: arc, lineWidth: lineWidth, mode: .stroke, inContext: context)
+        TYCircularSlider.drawArc(withArc: arc, lineWidth: lineWidth, mode: .stroke, inContext: context)
     }
 
     /**
@@ -118,7 +118,7 @@ extension CircularSlider {
         let thumbCircle = Circle(origin: thumbOrigin, radius: thumbRadius)
         let thumbArc = Arc(circle: thumbCircle, startAngle: CircularSliderHelper.circleMinValue, endAngle: CircularSliderHelper.circleMaxValue)
 
-        CircularSlider.drawArc(withArc: thumbArc, lineWidth: thumbLineWidth, inContext: context)
+        TYCircularSlider.drawArc(withArc: thumbArc, lineWidth: thumbLineWidth, inContext: context)
         return thumbOrigin
     }
 

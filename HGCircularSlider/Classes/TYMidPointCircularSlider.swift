@@ -1,5 +1,5 @@
 //
-//  MidPointCircularSlider.swift
+//  TYMidPointCircularSlider.swift
 //  Pods
 //
 //  Created by Hamza Ghazouani on 04/11/2016.
@@ -13,7 +13,7 @@ import UIKit
  MidPointCircularSlider use the target-action mechanism to report changes made during the course of editing:
  ValueChanged, EditingDidBegin and EditingDidEnd
  */
-open class MidPointCircularSlider: RangeCircularSlider {
+open class TYMidPointCircularSlider: TYRangeCircularSlider {
     
     // MARK: properties 
     

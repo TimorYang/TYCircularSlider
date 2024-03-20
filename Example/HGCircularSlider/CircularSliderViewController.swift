@@ -12,7 +12,7 @@ import HGCircularSlider
 
 class CircularSliderViewController: UIViewController {
 
-    @IBOutlet weak var circularSlider: CircularSlider!
+    @IBOutlet weak var circularSlider: TYCircularSlider!
     @IBOutlet weak var roundsLabel: UILabel!
     @IBOutlet weak var maxValueLabel: UILabel!
     @IBOutlet weak var minValueLabel: UILabel!

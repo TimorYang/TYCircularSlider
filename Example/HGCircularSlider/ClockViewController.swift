@@ -21,7 +21,7 @@ class ClockViewController: UIViewController {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var bedtimeLabel: UILabel!
     @IBOutlet weak var wakeLabel: UILabel!
-    @IBOutlet weak var rangeCircularSlider: RangeCircularSlider!
+    @IBOutlet weak var rangeCircularSlider: TYRangeCircularSlider!
     @IBOutlet weak var clockFormatSegmentedControl: UISegmentedControl!
     var timelineList: [TYCircularTimeRange]?
     
@@ -59,7 +59,7 @@ class ClockViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func updateTexts(_ sender: RangeCircularSlider) {
+    @IBAction func updateTexts(_ sender: TYRangeCircularSlider) {
         timelineList = sender.timeRangeList
         if let timeRangeList = sender.timeRangeList {
             print("888 888: --------------充电计划--------------")

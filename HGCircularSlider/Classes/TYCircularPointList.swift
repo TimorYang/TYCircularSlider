@@ -1,5 +1,5 @@
 //
-//  CircularPointList.swift
+//  TYCircularPointList.swift
 //  HGCircularSlider
 //
 //  Created by TeemoYang on 2024/3/16.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-class CircularPointList: NSObject {
-    private(set) var head: CircularPoint?
+class TYCircularPointList: NSObject {
+    private(set) var head: TYCircularPoint?
     private var count: Int = 0
     
     // 判断链表是否为空
@@ -23,7 +23,7 @@ class CircularPointList: NSObject {
     
     // 添加新元素到链表
     func append(value: CGFloat, isStart: Bool, isEnd: Bool) {
-        let newPoint = CircularPoint()
+        let newPoint = TYCircularPoint()
         newPoint.value = value
         newPoint.isStart = isStart
         newPoint.isEnd = isEnd
@@ -49,7 +49,7 @@ class CircularPointList: NSObject {
     }
     
     // 从指定节点开始遍历链表
-    func traverse(from node: CircularPoint? = nil, _ body: (CircularPoint) -> Bool) {
+    func traverse(from node: TYCircularPoint? = nil, _ body: (TYCircularPoint) -> Bool) {
         guard let startNode = node ?? head else { return }
         var currentNode = startNode
         repeat {
@@ -67,8 +67,8 @@ class CircularPointList: NSObject {
     
     func removeNode(withValue value: CGFloat) {
         guard let startNode = head else { return }
-        var currentNode: CircularPoint? = startNode
-        var previousNode: CircularPoint? = nil
+        var currentNode: TYCircularPoint? = startNode
+        var previousNode: TYCircularPoint? = nil
         
         repeat {
             if currentNode?.value == value {
@@ -100,7 +100,7 @@ class CircularPointList: NSObject {
         } while currentNode !== startNode
     }
     
-    func remove(node: CircularPoint) {
+    func remove(node: TYCircularPoint) {
         // 如果链表为空或者节点是nil，直接返回
         guard let _ = head, let _ = node.next, let _ = node.previous else { return }
 
@@ -127,9 +127,9 @@ class CircularPointList: NSObject {
 
 
     
-    func findFirstNode() -> CircularPoint? {
+    func findFirstNode() -> TYCircularPoint? {
         guard let startNode = head else { return nil }
-        var currentNode: CircularPoint? = startNode
+        var currentNode: TYCircularPoint? = startNode
         repeat {
             if currentNode?.isStart == true {
                 return currentNode
@@ -139,9 +139,9 @@ class CircularPointList: NSObject {
         return nil
     }
     
-    func findEndNode() -> CircularPoint? {
+    func findEndNode() -> TYCircularPoint? {
         guard let startNode = head else { return nil }
-        var currentNode: CircularPoint? = startNode
+        var currentNode: TYCircularPoint? = startNode
         repeat {
             if currentNode?.isEnd == true {
                 return currentNode

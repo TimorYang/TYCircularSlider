@@ -22,7 +22,7 @@ extension CALayer {
 
 class OtherExampleViewController: UIViewController {
 
-    @IBOutlet weak var circularSlider: MidPointCircularSlider!
+    @IBOutlet weak var circularSlider: TYMidPointCircularSlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()

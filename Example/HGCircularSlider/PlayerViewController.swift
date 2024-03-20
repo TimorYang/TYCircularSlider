@@ -20,7 +20,7 @@ private var playerViewControllerKVOContext = 0
 
 class PlayerViewController: UIViewController {
 
-    @IBOutlet weak var circularSlider: CircularSlider!
+    @IBOutlet weak var circularSlider: TYCircularSlider!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var playerSegmentedControl: UISegmentedControl!
     

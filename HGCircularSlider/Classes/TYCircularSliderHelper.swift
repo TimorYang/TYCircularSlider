@@ -1,5 +1,5 @@
 //
-//  CircularSlider+Math.swift
+//  TYCircularSlider+Math.swift
 //  Pods
 //
 //  Created by Hamza Ghazouani on 21/10/2016.

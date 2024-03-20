@@ -1,5 +1,5 @@
 //
-//  RangeCircularSlider.swift
+//  TYRangeCircularSlider.swift
 //  Pods
 //
 //  Created by Hamza Ghazouani on 25/10/2016.
@@ -13,7 +13,7 @@ import UIKit
  RangeCircularSlider use the target-action mechanism to report changes made during the course of editing:
  ValueChanged, EditingDidBegin and EditingDidEnd
  */
-open class RangeCircularSlider: CircularSlider {
+open class TYRangeCircularSlider: TYCircularSlider {
     
     open var timeRangeList: [TYCircularTimeRange]? {
         if midIntervalPoints.isEmpty {
@@ -229,7 +229,7 @@ open class RangeCircularSlider: CircularSlider {
     /**
      * Interval point
      */
-    fileprivate var intervalThumbPoint: CircularIntervalPoint?
+    fileprivate var intervalThumbPoint: TYCircularIntervalPoint?
     
     /**
      * The last touched thumb
@@ -331,7 +331,7 @@ open class RangeCircularSlider: CircularSlider {
             startThumbCenter = CGPoint.zero
             endThumbCenter = CGPoint.zero
             var index = 1
-            midIntervalPoints.traverse { (item: CircularIntervalPoint) in
+            midIntervalPoints.traverse { (item: TYCircularIntervalPoint) in
                 // get start angle from start value
                 let startAngle = CircularSliderHelper.scaleToAngle(value: item.start, inInterval: interval) + CircularSliderHelper.circleInitialAngle
                 // get end angle from end value
@@ -461,20 +461,20 @@ open class RangeCircularSlider: CircularSlider {
                 if endAngle > startAngle {
                     print("222: ------------ 开始顺时针方向 ------------")
                     print("222: 所有计划集合: **********")
-                    midIntervalPoints.traverse { (item: CircularIntervalPoint) in
+                    midIntervalPoints.traverse { (item: TYCircularIntervalPoint) in
                         print("222: 计划: \(item)")
                         return true
                     }
                     print("222: 所有计划集合: **********")
                     print("222: 自定义计划集合: =========")
-                    midIntervalPoints.traverse(from: _intervalThumbPoint, forward: true) { (item: CircularIntervalPoint) in
+                    midIntervalPoints.traverse(from: _intervalThumbPoint, forward: true) { (item: TYCircularIntervalPoint) in
                         print("222: 自定义计划: \(item)")
                         return true
                     }
                     print("222: 自定义计划集合: =========")
                     var isPointsInSameLine = true
                     var loop = 0
-                    midIntervalPoints.traverse(from: _intervalThumbPoint, forward: true) { (item: CircularIntervalPoint) in
+                    midIntervalPoints.traverse(from: _intervalThumbPoint, forward: true) { (item: TYCircularIntervalPoint) in
                         print("222: isPointsInSameLine: \(isPointsInSameLine)")
                         print("222: currentPoint: \(item)")
                         loop+=1
@@ -525,7 +525,7 @@ open class RangeCircularSlider: CircularSlider {
                 } else if endAngle < startAngle {
                     print("333: ------------ 开始逆时针方向 ------------")
                     print("333: 所有计划集合: **********")
-                    midIntervalPoints.traverse { (item: CircularIntervalPoint) in
+                    midIntervalPoints.traverse { (item: TYCircularIntervalPoint) in
                         print("333: 计划: \(item)")
                         return true
                     }
@@ -682,7 +682,7 @@ open class RangeCircularSlider: CircularSlider {
             }
         } else {
             var result: SelectedThumb = .none
-            midIntervalPoints.traverse { (item: CircularIntervalPoint) in
+            midIntervalPoints.traverse { (item: TYCircularIntervalPoint) in
                 if isThumb(withCenter: item.startThumbCenter, containsPoint: touchPosition) {
                     result = .internalPointStart
                     intervalThumbPoint = item
@@ -755,22 +755,22 @@ open class RangeCircularSlider: CircularSlider {
                         let unitValue = 60.0
                         let midStartValue = midValue - 30 * unitValue
                         let midEndValue = midValue + 30 * unitValue
-                        let startIntervalPoint = CircularIntervalPoint(start: startPointValue, end: midStartValue)
-                        let endIntervalPoint = CircularIntervalPoint(start: midEndValue, end: endPointValue)
+                        let startIntervalPoint = TYCircularIntervalPoint(start: startPointValue, end: midStartValue)
+                        let endIntervalPoint = TYCircularIntervalPoint(start: midEndValue, end: endPointValue)
                         midIntervalPoints.append(node: startIntervalPoint)
                         midIntervalPoints.append(node: endIntervalPoint)
                     }
                     print("111: ---------当前计划---------")
-                    midIntervalPoints.traverse { (item: CircularIntervalPoint) in
+                    midIntervalPoints.traverse { (item: TYCircularIntervalPoint) in
                         print("111: \(item)")
                         return true
                     }
                     print("111: ---------end---------")
                 }
             } else {
-                var selectedIntervalPoint: CircularIntervalPoint?
+                var selectedIntervalPoint: TYCircularIntervalPoint?
                 print("计划集合: \(midIntervalPoints)")
-                midIntervalPoints.traverse { (item: CircularIntervalPoint) in
+                midIntervalPoints.traverse { (item: TYCircularIntervalPoint) in
                     let result = isPointInArcCentered(touchPosition, item.start, item.end)
                     print("\(touchPosition) 是否在弧线\(item.start) - \(item.end)内：\(result)")
                     if result {
@@ -798,12 +798,12 @@ open class RangeCircularSlider: CircularSlider {
                     }
                     let midStartValue = midValue - 30 * unitValue
                     let midEndValue = midValue + 30 * unitValue
-                    let endIntervalPoint = CircularIntervalPoint(start: midEndValue, end: _selectedIntervalPoint.end)
+                    let endIntervalPoint = TYCircularIntervalPoint(start: midEndValue, end: _selectedIntervalPoint.end)
                     _selectedIntervalPoint.end = midStartValue
                     midIntervalPoints.insert(node: endIntervalPoint, afterNode: _selectedIntervalPoint)
                 }
                 print("111: ---------当前计划---------")
-                midIntervalPoints.traverse { (item: CircularIntervalPoint) in
+                midIntervalPoints.traverse { (item: TYCircularIntervalPoint) in
                     print("111: \(item.start) - \(item.end)")
                     return true
                 }
@@ -827,11 +827,11 @@ open class RangeCircularSlider: CircularSlider {
     }
     
     // MARK: - Private Properties
-    var midIntervalPoints = CircularIntervalPointList() {
+    var midIntervalPoints = TYCircularIntervalPointList() {
         didSet {
             print("2341: @@@@@@@@@@@@@@@我变更了@@@@@@@@@@@@@@@")
             print("2341: --------------新值开始-------------------")
-            midIntervalPoints.traverse { (item: CircularIntervalPoint) in
+            midIntervalPoints.traverse { (item: TYCircularIntervalPoint) in
                 print("2341: |__ \(item)")
                 return true
             }
@@ -839,12 +839,12 @@ open class RangeCircularSlider: CircularSlider {
         }
     }
     
-    private func lineList2PointList(from lineList: CircularIntervalPointList, startPoint target:CircularIntervalPoint, isBegin begin: Bool ) -> CircularPointList {
-        let result = CircularPointList()
+    private func lineList2PointList(from lineList: TYCircularIntervalPointList, startPoint target:TYCircularIntervalPoint, isBegin begin: Bool ) -> TYCircularPointList {
+        let result = TYCircularPointList()
         var lastValue: CGFloat? = nil
         var loop = 1
         print("666: -------------point start-------------)")
-        lineList.traverse(from: target, forward: true) { (item: CircularIntervalPoint) in
+        lineList.traverse(from: target, forward: true) { (item: TYCircularIntervalPoint) in
             print("666: \(item)")
             if loop == 1 {
                 if begin == false {
@@ -874,7 +874,7 @@ open class RangeCircularSlider: CircularSlider {
         }
         print("666: -------------point end-------------)")
         print("666: -------------start-------------)")
-        result.traverse { (item: CircularPoint) in
+        result.traverse { (item: TYCircularPoint) in
             print("666: \(item)")
             return true
         }
@@ -882,7 +882,7 @@ open class RangeCircularSlider: CircularSlider {
         return result
     }
     
-    private func modifyLineList(by pointList: CircularPointList, selectLine line: CircularIntervalPoint) {
+    private func modifyLineList(by pointList: TYCircularPointList, selectLine line: TYCircularIntervalPoint) {
         var currentLine = line
         print("2341: @@@@@@@@@@@@@@@@@旧值开始@@@@@@@@@@@@@@@@@")
         currentLine = line
@@ -923,14 +923,14 @@ open class RangeCircularSlider: CircularSlider {
         print("2341: @@@@@@@@@@@@@@@@@新值结束@@@@@@@@@@@@@@@@@")
     }
 
-    private func pointList2LineList(from pointList: CircularPointList) -> CircularIntervalPointList? {
+    private func pointList2LineList(from pointList: TYCircularPointList) -> TYCircularIntervalPointList? {
         print("777: ------------strat-------------")
-        pointList.traverse { (item: CircularPoint) in
+        pointList.traverse { (item: TYCircularPoint) in
             print("777: \(item)")
             return true
         }
         print("777: ------------end-------------")
-        let result = CircularIntervalPointList()
+        let result = TYCircularIntervalPointList()
         // 找到 isStart 为 true
         guard let startPoint = pointList.findFirstNode() else {
             print("777: 数据存在问题")
@@ -948,7 +948,7 @@ open class RangeCircularSlider: CircularSlider {
         }
         
         if endPoint != nextPoint {
-            let intervalPoint = CircularIntervalPoint(start: endPoint.value, end: startPoint.value)
+            let intervalPoint = TYCircularIntervalPoint(start: endPoint.value, end: startPoint.value)
             result.append(node: intervalPoint)
             nextPoint.isStart = true
             pointList.remove(node: startPoint)
@@ -969,11 +969,11 @@ open class RangeCircularSlider: CircularSlider {
             currentPoint = currentPoint.next!
             let end = currentPoint.value
             currentPoint = currentPoint.next!
-            result.append(node: CircularIntervalPoint(start: start, end: end))
+            result.append(node: TYCircularIntervalPoint(start: start, end: end))
         } while currentPoint != beginPoint
         
         print("777666: ----------begin recover----------")
-        result.traverse { (item: CircularIntervalPoint) in
+        result.traverse { (item: TYCircularIntervalPoint) in
             print("777666: \(item)")
             return true
         }
@@ -1010,9 +1010,9 @@ open class RangeCircularSlider: CircularSlider {
         }
     }
     
-    private func intervalPointList2TimeRangeList(from pointList: CircularIntervalPointList) -> [TYCircularTimeRange] {
+    private func intervalPointList2TimeRangeList(from pointList: TYCircularIntervalPointList) -> [TYCircularTimeRange] {
         var list = [TYCircularTimeRange]()
-        pointList.traverse { (item: CircularIntervalPoint) in
+        pointList.traverse { (item: TYCircularIntervalPoint) in
             var tmp = TYCircularTimeRange()
             tmp.start = item.start
             tmp.end = item.end
