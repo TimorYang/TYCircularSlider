@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,7 +44,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="108" placeholderIntrinsicHeight="33" text="12:00 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ode-Tz-DNv">
                                                 <rect key="frame" x="23" y="24" width="108" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -68,7 +69,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="115" placeholderIntrinsicHeight="33" text="12:00 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh9-bX-Mdn">
                                                 <rect key="frame" x="19.5" y="24" width="115" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -126,16 +127,28 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NyF-hK-kDD">
+                                <rect key="frame" x="26" y="469" width="323" height="149"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="CT4-vj-wFA" id="AzW-vg-sbT"/>
+                                    <outlet property="delegate" destination="CT4-vj-wFA" id="FEn-um-Ate"/>
+                                </connections>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="B7k-gj-MGd" firstAttribute="centerX" secondItem="4jd-aQ-SwJ" secondAttribute="centerX" id="A2F-1K-8e3"/>
                             <constraint firstItem="dyk-gn-E0m" firstAttribute="leading" secondItem="4jd-aQ-SwJ" secondAttribute="leadingMargin" constant="10" id="Dl0-lI-EH6"/>
+                            <constraint firstItem="NyF-hK-kDD" firstAttribute="leading" secondItem="4jd-aQ-SwJ" secondAttribute="leadingMargin" constant="10" id="IMe-sm-fNe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NyF-hK-kDD" secondAttribute="trailing" constant="10" id="LVg-Nr-gJr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dyk-gn-E0m" secondAttribute="trailing" constant="10" id="N5U-c7-Tfy"/>
                             <constraint firstItem="2Yn-91-Eq6" firstAttribute="centerY" secondItem="B7k-gj-MGd" secondAttribute="centerY" id="OM2-lB-fj3"/>
+                            <constraint firstItem="NyF-hK-kDD" firstAttribute="top" secondItem="B7k-gj-MGd" secondAttribute="bottom" id="TgY-gO-BQx"/>
                             <constraint firstItem="2Yn-91-Eq6" firstAttribute="centerX" secondItem="B7k-gj-MGd" secondAttribute="centerX" id="VWY-Ky-HzA"/>
                             <constraint firstItem="B7k-gj-MGd" firstAttribute="centerY" secondItem="4jd-aQ-SwJ" secondAttribute="centerY" id="YFL-7T-X0H"/>
+                            <constraint firstItem="lUY-qL-6BD" firstAttribute="top" secondItem="NyF-hK-kDD" secondAttribute="bottom" id="bYr-Od-r7s"/>
                             <constraint firstItem="B7k-gj-MGd" firstAttribute="top" secondItem="dyk-gn-E0m" secondAttribute="bottom" constant="16" id="wTi-nq-Asd"/>
                         </constraints>
                     </view>
@@ -146,12 +159,13 @@
                         <outlet property="bedtimeLabel" destination="Ode-Tz-DNv" id="a1P-nt-aaZ"/>
                         <outlet property="durationLabel" destination="2Yn-91-Eq6" id="3lh-r2-GXs"/>
                         <outlet property="rangeCircularSlider" destination="B7k-gj-MGd" id="T78-sm-rbg"/>
+                        <outlet property="tableView" destination="NyF-hK-kDD" id="Jp3-OC-Psg"/>
                         <outlet property="wakeLabel" destination="lh9-bX-Mdn" id="AfO-9T-Vva"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IfT-Jw-FAY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2007.2" y="2219.6401799100449"/>
+            <point key="canvasLocation" x="-2007.2" y="2218.7406296851577"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="M9S-pb-Waq">
@@ -743,5 +757,8 @@
         <image name="ic_wake" width="13" height="16"/>
         <image name="second" width="30" height="30"/>
         <image name="time_indicators" width="301" height="300"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

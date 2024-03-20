@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="195" id="KGk-i7-Jjw" customClass="TimeLineViewCell" customModule="HGCircularSlider_Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="492" height="195"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="492" height="195"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UE2-44-jlp">
+                        <rect key="frame" x="20" y="11" width="301.33333333333331" height="173"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Id2-tu-6S2">
+                        <rect key="frame" x="321.33333333333331" y="11" width="150.66666666666669" height="173"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="删除">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eLP-Es-2vI"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Id2-tu-6S2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="KO1-Gz-jqR"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Id2-tu-6S2" secondAttribute="trailing" id="Ly3-OG-axx"/>
+                    <constraint firstItem="UE2-44-jlp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="NXa-xA-aJm"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Id2-tu-6S2" secondAttribute="bottom" id="OEs-1v-Yar"/>
+                    <constraint firstItem="UE2-44-jlp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="aPH-ZV-jqh"/>
+                    <constraint firstItem="Id2-tu-6S2" firstAttribute="width" secondItem="UE2-44-jlp" secondAttribute="width" multiplier="0.5" id="hrF-ks-9Tr"/>
+                    <constraint firstItem="Id2-tu-6S2" firstAttribute="leading" secondItem="UE2-44-jlp" secondAttribute="trailing" id="ndn-Mh-ukf"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="UE2-44-jlp" secondAttribute="bottom" id="q8l-vh-4HJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="label" destination="UE2-44-jlp" id="an5-od-wQ4"/>
+            </connections>
+            <point key="canvasLocation" x="261.06870229007632" y="20.774647887323944"/>
+        </tableViewCell>
+    </objects>
+</document>

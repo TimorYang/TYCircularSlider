@@ -72,7 +72,24 @@ class CircularIntervalPointList: NSObject {
         nodeCount -= 1  // 删除节点后，节点数减少
     }
     
-    
+    func remove(start: CGFloat, end: CGFloat) {
+        var currentNode = head
+        var nodesToRemove: [CircularIntervalPoint] = []
+
+        // 首先，遍历链表找到所有需要删除的节点
+        repeat {
+            if let node = currentNode, node.start >= start && node.end <= end {
+                nodesToRemove.append(node)
+            }
+            currentNode = currentNode?.next
+        } while currentNode !== head && currentNode != nil
+        
+        // 然后，删除所有标记的节点
+        for node in nodesToRemove {
+            remove(node: node)
+        }
+    }
+
     // 查找节点
     func findNode(withStart value: CGFloat) -> CircularIntervalPoint? {
         var currentNode = head

@@ -15,11 +15,6 @@ import UIKit
  */
 open class RangeCircularSlider: CircularSlider {
     
-    public struct TYCircularTimeRange {
-        var start: CGFloat? // 起始时间，使用整数表示（例如，秒数）
-        var end: CGFloat? // 结束时间，使用整数表示（例如，秒数）
-    }
-    
     open var timeRangeList: [TYCircularTimeRange]? {
         if midIntervalPoints.isEmpty {
             return [TYCircularTimeRange(start: startPointValue, end: endPointValue)]
@@ -188,6 +183,21 @@ open class RangeCircularSlider: CircularSlider {
             }
             
             setNeedsDisplay()
+        }
+    }
+    
+    open func removeTimeRange(timeRange: TYCircularTimeRange) {
+        if let _start = timeRange.start, let _end = timeRange.end {
+            midIntervalPoints.remove(start: _start, end: _end)
+            if midIntervalPoints.count == 1 {
+                if let _head = midIntervalPoints.first {
+                    startPointValue = _head.start
+                    endPointValue = _head.end
+                    midIntervalPoints.remove(node: _head)
+                }
+            }
+            setNeedsDisplay()
+            sendActions(for: .valueChanged)
         }
     }
     
