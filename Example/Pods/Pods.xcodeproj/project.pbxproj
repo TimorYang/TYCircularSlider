@@ -7,145 +7,135 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02636088CEB624C623018266734AF6D5 /* TYCircularPointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85676306DBB6A7AA1918013DC02A99D /* TYCircularPointList.swift */; };
-		2F754E5160634EE8F1CBB37E0344D72B /* Pods-HGCircularSlider_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81FC561DDFE28687FAB5EE8B81912CF6 /* Pods-HGCircularSlider_Example-dummy.m */; };
-		3343E11E96863244BA54876268193C24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		3B770B222BA9923A0013A6DC /* TYCircularTimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B770B212BA9923A0013A6DC /* TYCircularTimeRange.swift */; };
-		3C478F5F095C98E740D3245CF551FDF4 /* Pods-HGCircularSlider_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0531D278A24CD38372CAB079C2BCC3CC /* Pods-HGCircularSlider_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		40899B669ADBCE3CCFB24AA17636D309 /* Pods-HGCircularSlider_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 335044A8F24C8F65A1C993D9DF2B659F /* Pods-HGCircularSlider_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		431892FDB896C2123440A1F2ADE65BD5 /* TYCircularSlider+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7521F62CDF613959E55B41458C529347 /* TYCircularSlider+Draw.swift */; };
-		579503B9011E13DE52F116F730BBC6A8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		651966FDBC6CD15B0D5FC529E5166235 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		8245B9A0315E12D8C08073DD92CE782F /* TYCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C35726E3E213B622479CBFC6F43C6AC /* TYCircularSlider.swift */; };
-		88B3F81F0FAA0A128F9B742DDBC013E6 /* HGCircularSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF32557B431109790CE0BA62A967EBA /* HGCircularSlider-dummy.m */; };
-		998A42BA79CE29C8F0FEB29BE52DC01E /* Pods-HGCircularSlider_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C16B40AB1704FFF772672C6D1C349BA /* Pods-HGCircularSlider_Tests-dummy.m */; };
-		9D542F528500C5B0529D86873AB8B737 /* TYMidPointCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6697445020823A963FDD36403321A /* TYMidPointCircularSlider.swift */; };
-		9E23408893A226DD2E02E9D0F94DEFC8 /* TYRangeCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B47F5C17E660674127AB148D3FC2DE /* TYRangeCircularSlider.swift */; };
-		AC493AEDF149D215F5DE3AA40389E00F /* TYCircularSliderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDD5C573F3D05E2274D83DACA41CB31 /* TYCircularSliderHelper.swift */; };
-		B1C5888644B6AA141ECDF3D9C48AEAE5 /* TYCircularIntervalPointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C443DF837BA7FA74971057D982EA2F95 /* TYCircularIntervalPointList.swift */; };
-		D31FA82327319157548AD322E549892D /* HGCircularSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3963F1426161589242E4566ED259D4C4 /* HGCircularSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D32E40AECFFCB66184B44F701854D2AA /* TYCircularPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC787B42A6E03093FFDD000E155A8E6 /* TYCircularPoint.swift */; };
-		EDBC8B58187F479A2DEF9EFF7E6C578A /* TYCircularIntervalPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8C190FA750EB3C06D082051FB0782 /* TYCircularIntervalPoint.swift */; };
+		20CFED8896395CA1CE5A7392B112B59E /* TYRangeCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8B7AD5C25A65FD1DBFC4B343B6A37 /* TYRangeCircularSlider.swift */; };
+		21834C5C40F4D1C8522A90817F1D07F4 /* TYMidPointCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8585386DBF1739E95B480E78212DF86 /* TYMidPointCircularSlider.swift */; };
+		3793EAA2F1669A72687E359F581C04CC /* TYCircularSliderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58CF5FB9B2448B74E4FBDDE55CD1F5A0 /* TYCircularSliderHelper.swift */; };
+		3ED4227EC16047FBCE90B857B4339D6E /* Pods-TYCircularSlider_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E62C856F8906350B5EE494C486FBF7 /* Pods-TYCircularSlider_Example-dummy.m */; };
+		528F3801E23F4D748364946B36EF2202 /* TYCircularSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384C12AB47A84753D7B340BC895F7665 /* TYCircularSlider.swift */; };
+		5C6585982501769B33F7734D6C432DB8 /* TYCircularPointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803177580D561888D9B841A973C488CE /* TYCircularPointList.swift */; };
+		653AC827DC9825F7B115FEF9CD21409E /* TYCircularIntervalPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556DD4A7D07390A51D231E9BF401118B /* TYCircularIntervalPoint.swift */; };
+		6AE4D250D170FCBE58882A42E21F5C52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6D155A37E8EDC827C1A3A647266053CE /* HGCircularSlider-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BD1E9687D3E8D86D66A832EF66C08DE /* HGCircularSlider-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C7A9EE2B6CD9F5FAD761BB125CCE3F6 /* HGCircularSlider-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB549807FDB82B3BF4D1F36598341953 /* HGCircularSlider-dummy.m */; };
+		9372140362B42662B5220C477FC4879E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		945CD0147B2FF4A9C249C89681E4826A /* TYCircularTimeRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409D8BE306B4311C2BA6CAAEB23F67A /* TYCircularTimeRange.swift */; };
+		94955AFC829AB9AAD7BCE0BE2E32666D /* TYCircularPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCC4A8B539DB46224740ED8148049FC /* TYCircularPoint.swift */; };
+		97530DCC24188BE278BFFC2E15C61684 /* TYCircularIntervalPointList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8E3ED106894960F1965D27F896CAC0 /* TYCircularIntervalPointList.swift */; };
+		BDDF6E0B46B3A881ED7223480A459568 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E44C9644DFB55F676395416E08357D06 /* TYCircularSlider+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCB86B2364FB8DB7831B5A182B77D3 /* TYCircularSlider+Draw.swift */; };
+		E466360DCF7C1C83DA447DE171630E44 /* Pods-TYCircularSlider_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 69EDEA30F4342F1B28A460EED8F81C6F /* Pods-TYCircularSlider_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0768433AF9A53204545EB0B6F556443 /* Pods-TYCircularSlider_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 053C2BC08F4D0E827489BBFF90DD7C2E /* Pods-TYCircularSlider_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA670C3168BD871A6229D694AE0AAFA4 /* Pods-TYCircularSlider_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 361722FC7B851C59518BA5C55580A0F1 /* Pods-TYCircularSlider_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2A44F53FE0B788992A48B93F9B22FE82 /* PBXContainerItemProxy */ = {
+		7D5D5B124DA3232991A5C145CA26E83A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 82EEAE7DB07C6F17150BFE2EAD014CB2;
 			remoteInfo = HGCircularSlider;
 		};
-		492E41413A9FD5D1C3E7611E8F356DB9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B213802BB3911873FA13A1912E82012F;
-			remoteInfo = "Pods-HGCircularSlider_Example";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02588610488867870353D10A66D62EBA /* Pods-HGCircularSlider_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		0531D278A24CD38372CAB079C2BCC3CC /* Pods-HGCircularSlider_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HGCircularSlider_Tests-umbrella.h"; sourceTree = "<group>"; };
-		05F1C73E68AFD4BCA4EF9A4E6E4B5214 /* HGCircularSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGCircularSlider-prefix.pch"; sourceTree = "<group>"; };
-		0AF358B098CA987B9EFF01408062A8F6 /* HGCircularSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HGCircularSlider.modulemap; sourceTree = "<group>"; };
-		1BF32557B431109790CE0BA62A967EBA /* HGCircularSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HGCircularSlider-dummy.m"; sourceTree = "<group>"; };
-		1E1BF6C83725DDB4DC670EBED77CCA01 /* HGCircularSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGCircularSlider.debug.xcconfig; sourceTree = "<group>"; };
-		1FC787B42A6E03093FFDD000E155A8E6 /* TYCircularPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularPoint.swift; path = HGCircularSlider/Classes/TYCircularPoint.swift; sourceTree = "<group>"; };
-		2878A7138E8A98E3B5985164713B37C3 /* Pods-HGCircularSlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HGCircularSlider_Tests.modulemap"; sourceTree = "<group>"; };
-		2A9F8906F31F255CFAC8C955C0AD0EB8 /* Pods-HGCircularSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HGCircularSlider_Example.modulemap"; sourceTree = "<group>"; };
-		2CF6697445020823A963FDD36403321A /* TYMidPointCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYMidPointCircularSlider.swift; path = HGCircularSlider/Classes/TYMidPointCircularSlider.swift; sourceTree = "<group>"; };
-		335044A8F24C8F65A1C993D9DF2B659F /* Pods-HGCircularSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HGCircularSlider_Example-umbrella.h"; sourceTree = "<group>"; };
-		33B8C190FA750EB3C06D082051FB0782 /* TYCircularIntervalPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularIntervalPoint.swift; path = HGCircularSlider/Classes/TYCircularIntervalPoint.swift; sourceTree = "<group>"; };
-		3963F1426161589242E4566ED259D4C4 /* HGCircularSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGCircularSlider-umbrella.h"; sourceTree = "<group>"; };
-		3B770B212BA9923A0013A6DC /* TYCircularTimeRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TYCircularTimeRange.swift; path = HGCircularSlider/Classes/TYCircularTimeRange.swift; sourceTree = "<group>"; };
-		40A9E1BF9BD7E69EC9050CD12524CA6A /* Pods-HGCircularSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HGCircularSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		4228D6D3CEDCA8624C7F5A1F8225A29B /* Pods-HGCircularSlider_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Example-Info.plist"; sourceTree = "<group>"; };
-		4926A9DAFEDBBFB51FC2FA92126C7032 /* Pods-HGCircularSlider_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Tests-Info.plist"; sourceTree = "<group>"; };
-		4C16B40AB1704FFF772672C6D1C349BA /* Pods-HGCircularSlider_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HGCircularSlider_Tests-dummy.m"; sourceTree = "<group>"; };
-		54A3FC20C66408531C03EEF4B9821AE3 /* Pods-HGCircularSlider_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HGCircularSlider_Tests"; path = Pods_HGCircularSlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FF10228F135DF7D98356359375F0F50 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		053C2BC08F4D0E827489BBFF90DD7C2E /* Pods-TYCircularSlider_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TYCircularSlider_Example-umbrella.h"; sourceTree = "<group>"; };
+		078983E6C982626DD3AB0F141F65A270 /* Pods-TYCircularSlider_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TYCircularSlider_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		0F8E3ED106894960F1965D27F896CAC0 /* TYCircularIntervalPointList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularIntervalPointList.swift; path = HGCircularSlider/Classes/TYCircularIntervalPointList.swift; sourceTree = "<group>"; };
+		26CCB86B2364FB8DB7831B5A182B77D3 /* TYCircularSlider+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TYCircularSlider+Draw.swift"; path = "HGCircularSlider/Classes/TYCircularSlider+Draw.swift"; sourceTree = "<group>"; };
+		33B8B7AD5C25A65FD1DBFC4B343B6A37 /* TYRangeCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYRangeCircularSlider.swift; path = HGCircularSlider/Classes/TYRangeCircularSlider.swift; sourceTree = "<group>"; };
+		361722FC7B851C59518BA5C55580A0F1 /* Pods-TYCircularSlider_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TYCircularSlider_Tests-dummy.m"; sourceTree = "<group>"; };
+		384C12AB47A84753D7B340BC895F7665 /* TYCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularSlider.swift; path = HGCircularSlider/Classes/TYCircularSlider.swift; sourceTree = "<group>"; };
+		45DF0C2E0BDAC7A69AAB6A9B104694BD /* Pods-TYCircularSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TYCircularSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		488EA4A2020870B9AA7BA7A3AFC017F1 /* Pods-TYCircularSlider_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TYCircularSlider_Tests.modulemap"; sourceTree = "<group>"; };
+		5498037987AE50C5183F1A7C01F5233E /* Pods-TYCircularSlider_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TYCircularSlider_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		556DD4A7D07390A51D231E9BF401118B /* TYCircularIntervalPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularIntervalPoint.swift; path = HGCircularSlider/Classes/TYCircularIntervalPoint.swift; sourceTree = "<group>"; };
+		57B925ED25724E33F9A75D3E605964D8 /* Pods-TYCircularSlider_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TYCircularSlider_Example-Info.plist"; sourceTree = "<group>"; };
+		58CF5FB9B2448B74E4FBDDE55CD1F5A0 /* TYCircularSliderHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularSliderHelper.swift; path = HGCircularSlider/Classes/TYCircularSliderHelper.swift; sourceTree = "<group>"; };
+		59E62C856F8906350B5EE494C486FBF7 /* Pods-TYCircularSlider_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TYCircularSlider_Example-dummy.m"; sourceTree = "<group>"; };
+		673BD00B701BBE3A892FC47021D2C049 /* Pods-TYCircularSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TYCircularSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		69EDEA30F4342F1B28A460EED8F81C6F /* Pods-TYCircularSlider_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TYCircularSlider_Tests-umbrella.h"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7521F62CDF613959E55B41458C529347 /* TYCircularSlider+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TYCircularSlider+Draw.swift"; path = "HGCircularSlider/Classes/TYCircularSlider+Draw.swift"; sourceTree = "<group>"; };
-		776ED7C653C3A88DA02FD10175A670B9 /* HGCircularSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGCircularSlider.release.xcconfig; sourceTree = "<group>"; };
-		81FC561DDFE28687FAB5EE8B81912CF6 /* Pods-HGCircularSlider_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HGCircularSlider_Example-dummy.m"; sourceTree = "<group>"; };
-		8C35726E3E213B622479CBFC6F43C6AC /* TYCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularSlider.swift; path = HGCircularSlider/Classes/TYCircularSlider.swift; sourceTree = "<group>"; };
-		8CD6A4F5CE27BAFFC31E4878DDB01BDD /* Pods-HGCircularSlider_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HGCircularSlider_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		912406725FA30057CA11E94A42405766 /* Pods-HGCircularSlider_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HGCircularSlider_Example"; path = Pods_HGCircularSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3CD69074F507B3569D5B513D27549F8 /* Pods-HGCircularSlider_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HGCircularSlider_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A8B47F5C17E660674127AB148D3FC2DE /* TYRangeCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYRangeCircularSlider.swift; path = HGCircularSlider/Classes/TYRangeCircularSlider.swift; sourceTree = "<group>"; };
-		AFC346AA48EFB5D46A20277F1F852536 /* HGCircularSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HGCircularSlider-Info.plist"; sourceTree = "<group>"; };
-		BBDD5C573F3D05E2274D83DACA41CB31 /* TYCircularSliderHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularSliderHelper.swift; path = HGCircularSlider/Classes/TYCircularSliderHelper.swift; sourceTree = "<group>"; };
-		C443DF837BA7FA74971057D982EA2F95 /* TYCircularIntervalPointList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularIntervalPointList.swift; path = HGCircularSlider/Classes/TYCircularIntervalPointList.swift; sourceTree = "<group>"; };
-		DA1EA90A0DC940741BB9510A83433F9E /* Pods-HGCircularSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HGCircularSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		7BCC4A8B539DB46224740ED8148049FC /* TYCircularPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularPoint.swift; path = HGCircularSlider/Classes/TYCircularPoint.swift; sourceTree = "<group>"; };
+		7BD1E9687D3E8D86D66A832EF66C08DE /* HGCircularSlider-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGCircularSlider-umbrella.h"; sourceTree = "<group>"; };
+		803177580D561888D9B841A973C488CE /* TYCircularPointList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularPointList.swift; path = HGCircularSlider/Classes/TYCircularPointList.swift; sourceTree = "<group>"; };
+		81F8B83C954D7A950640797DC96B3BEB /* HGCircularSlider.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HGCircularSlider.modulemap; sourceTree = "<group>"; };
+		8EDFCD6C6A74D3F265892F00DB9C2987 /* Pods-TYCircularSlider_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TYCircularSlider_Tests"; path = Pods_TYCircularSlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		946246556928A5D56EB6027495726824 /* Pods-TYCircularSlider_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TYCircularSlider_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		974449544AF4799B8D33F0C7DE018CA9 /* Pods-TYCircularSlider_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TYCircularSlider_Tests-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A14AB0E4A2E268CE1D270BBE4F9EA8CA /* Pods-TYCircularSlider_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TYCircularSlider_Example"; path = Pods_TYCircularSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1B12A20EB02A06FA5BF0ADE62719056 /* Pods-TYCircularSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TYCircularSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B3296D4D474FC004A733EDF38F53BC4B /* HGCircularSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HGCircularSlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B8195FA44F59A02AF7E15EDE24B84D95 /* HGCircularSlider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGCircularSlider.debug.xcconfig; sourceTree = "<group>"; };
+		B8579DD45AA64E985D943131D800B3FD /* Pods-TYCircularSlider_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TYCircularSlider_Example.modulemap"; sourceTree = "<group>"; };
+		C37C0E6E3668DC73EC271C3FB3ADB7A0 /* Pods-TYCircularSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TYCircularSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C8585386DBF1739E95B480E78212DF86 /* TYMidPointCircularSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYMidPointCircularSlider.swift; path = HGCircularSlider/Classes/TYMidPointCircularSlider.swift; sourceTree = "<group>"; };
+		CB549807FDB82B3BF4D1F36598341953 /* HGCircularSlider-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HGCircularSlider-dummy.m"; sourceTree = "<group>"; };
+		D24C517703026B0C8BE2C6359C9AC57D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		D62326809AA84726053973E61D340380 /* HGCircularSlider-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HGCircularSlider-Info.plist"; sourceTree = "<group>"; };
 		DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HGCircularSlider; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E85676306DBB6A7AA1918013DC02A99D /* TYCircularPointList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularPointList.swift; path = HGCircularSlider/Classes/TYCircularPointList.swift; sourceTree = "<group>"; };
-		E89E5B545A6604882E250A1E69959933 /* Pods-HGCircularSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HGCircularSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F02865DEE9787F23B1A36BFEA162CC44 /* HGCircularSlider.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HGCircularSlider.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F48C480530B1EEC63B12E3D25AC41FBF /* Pods-HGCircularSlider_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HGCircularSlider_Example-frameworks.sh"; sourceTree = "<group>"; };
-		F5D4D0CC167B194D4B1C35D0105DB71E /* Pods-HGCircularSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HGCircularSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F67D7741A5D5337FC7DD8B7720B2AAAA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FA9955D22C912FD36A0B6FC9CC971DBA /* Pods-HGCircularSlider_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HGCircularSlider_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DEF3BCB7CF29C2C8AAED6FFAFBECB2FE /* Pods-TYCircularSlider_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TYCircularSlider_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E15F73A3A1372937F27BC4AB2479B06D /* HGCircularSlider-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HGCircularSlider-prefix.pch"; sourceTree = "<group>"; };
+		E409D8BE306B4311C2BA6CAAEB23F67A /* TYCircularTimeRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TYCircularTimeRange.swift; path = HGCircularSlider/Classes/TYCircularTimeRange.swift; sourceTree = "<group>"; };
+		EC5DB5EDCCB8FFCB043227DDE4B31536 /* Pods-TYCircularSlider_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TYCircularSlider_Example-frameworks.sh"; sourceTree = "<group>"; };
+		F159C2786300047B458B67956EAA20CF /* HGCircularSlider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HGCircularSlider.release.xcconfig; sourceTree = "<group>"; };
+		F9A38D83D2A75EBED9800AC1E15EC511 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CBF214B1999E0D183009550EBCEAD2F7 /* Frameworks */ = {
+		3115925FE44E6293F9B65F26AEAEFE46 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3343E11E96863244BA54876268193C24 /* Foundation.framework in Frameworks */,
+				BDDF6E0B46B3A881ED7223480A459568 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D97FF77A0FA289C47E8FA41216AF2BB7 /* Frameworks */ = {
+		3912C553D3D57C00206492F73E7D47D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				579503B9011E13DE52F116F730BBC6A8 /* Foundation.framework in Frameworks */,
+				9372140362B42662B5220C477FC4879E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F877423ADA6A3C9544E2BDCA0C6B85DB /* Frameworks */ = {
+		AE473125F6F318DAAF376DAEC2432D78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				651966FDBC6CD15B0D5FC529E5166235 /* Foundation.framework in Frameworks */,
+				6AE4D250D170FCBE58882A42E21F5C52 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		057E656A0CB10C5B45EA8F537AC58367 /* Products */ = {
+		429C35DAFFAD6608CDC681094916A7D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider */,
-				912406725FA30057CA11E94A42405766 /* Pods-HGCircularSlider_Example */,
-				54A3FC20C66408531C03EEF4B9821AE3 /* Pods-HGCircularSlider_Tests */,
+				A14AB0E4A2E268CE1D270BBE4F9EA8CA /* Pods-TYCircularSlider_Example */,
+				8EDFCD6C6A74D3F265892F00DB9C2987 /* Pods-TYCircularSlider_Tests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4C8EB513C076068C7C8748ADA51212CB /* HGCircularSlider */ = {
+		4D1673CDE259F6B54A45BF76CB624DB0 /* Pods-TYCircularSlider_Example */ = {
 			isa = PBXGroup;
 			children = (
-				33B8C190FA750EB3C06D082051FB0782 /* TYCircularIntervalPoint.swift */,
-				C443DF837BA7FA74971057D982EA2F95 /* TYCircularIntervalPointList.swift */,
-				1FC787B42A6E03093FFDD000E155A8E6 /* TYCircularPoint.swift */,
-				E85676306DBB6A7AA1918013DC02A99D /* TYCircularPointList.swift */,
-				8C35726E3E213B622479CBFC6F43C6AC /* TYCircularSlider.swift */,
-				7521F62CDF613959E55B41458C529347 /* TYCircularSlider+Draw.swift */,
-				BBDD5C573F3D05E2274D83DACA41CB31 /* TYCircularSliderHelper.swift */,
-				2CF6697445020823A963FDD36403321A /* TYMidPointCircularSlider.swift */,
-				A8B47F5C17E660674127AB148D3FC2DE /* TYRangeCircularSlider.swift */,
-				A3DDDF4884F12858D31687AF2FAAC716 /* Pod */,
-				5A33E48BDF318BC57006BE8F003F2B01 /* Support Files */,
-				3B770B212BA9923A0013A6DC /* TYCircularTimeRange.swift */,
+				B8579DD45AA64E985D943131D800B3FD /* Pods-TYCircularSlider_Example.modulemap */,
+				5498037987AE50C5183F1A7C01F5233E /* Pods-TYCircularSlider_Example-acknowledgements.markdown */,
+				078983E6C982626DD3AB0F141F65A270 /* Pods-TYCircularSlider_Example-acknowledgements.plist */,
+				59E62C856F8906350B5EE494C486FBF7 /* Pods-TYCircularSlider_Example-dummy.m */,
+				EC5DB5EDCCB8FFCB043227DDE4B31536 /* Pods-TYCircularSlider_Example-frameworks.sh */,
+				57B925ED25724E33F9A75D3E605964D8 /* Pods-TYCircularSlider_Example-Info.plist */,
+				053C2BC08F4D0E827489BBFF90DD7C2E /* Pods-TYCircularSlider_Example-umbrella.h */,
+				C37C0E6E3668DC73EC271C3FB3ADB7A0 /* Pods-TYCircularSlider_Example.debug.xcconfig */,
+				B1B12A20EB02A06FA5BF0ADE62719056 /* Pods-TYCircularSlider_Example.release.xcconfig */,
 			);
-			name = HGCircularSlider;
-			path = ../..;
+			name = "Pods-TYCircularSlider_Example";
+			path = "Target Support Files/Pods-TYCircularSlider_Example";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -156,89 +146,84 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5A33E48BDF318BC57006BE8F003F2B01 /* Support Files */ = {
+		5D463FD94231F3DC6EB302EC324E5CF0 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				0AF358B098CA987B9EFF01408062A8F6 /* HGCircularSlider.modulemap */,
-				1BF32557B431109790CE0BA62A967EBA /* HGCircularSlider-dummy.m */,
-				AFC346AA48EFB5D46A20277F1F852536 /* HGCircularSlider-Info.plist */,
-				05F1C73E68AFD4BCA4EF9A4E6E4B5214 /* HGCircularSlider-prefix.pch */,
-				3963F1426161589242E4566ED259D4C4 /* HGCircularSlider-umbrella.h */,
-				1E1BF6C83725DDB4DC670EBED77CCA01 /* HGCircularSlider.debug.xcconfig */,
-				776ED7C653C3A88DA02FD10175A670B9 /* HGCircularSlider.release.xcconfig */,
+				B3296D4D474FC004A733EDF38F53BC4B /* HGCircularSlider.podspec */,
+				D24C517703026B0C8BE2C6359C9AC57D /* LICENSE */,
+				F9A38D83D2A75EBED9800AC1E15EC511 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		641751E9DA3888F2A09A87BD572DCB7F /* Pods-TYCircularSlider_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				488EA4A2020870B9AA7BA7A3AFC017F1 /* Pods-TYCircularSlider_Tests.modulemap */,
+				DEF3BCB7CF29C2C8AAED6FFAFBECB2FE /* Pods-TYCircularSlider_Tests-acknowledgements.markdown */,
+				946246556928A5D56EB6027495726824 /* Pods-TYCircularSlider_Tests-acknowledgements.plist */,
+				361722FC7B851C59518BA5C55580A0F1 /* Pods-TYCircularSlider_Tests-dummy.m */,
+				974449544AF4799B8D33F0C7DE018CA9 /* Pods-TYCircularSlider_Tests-Info.plist */,
+				69EDEA30F4342F1B28A460EED8F81C6F /* Pods-TYCircularSlider_Tests-umbrella.h */,
+				673BD00B701BBE3A892FC47021D2C049 /* Pods-TYCircularSlider_Tests.debug.xcconfig */,
+				45DF0C2E0BDAC7A69AAB6A9B104694BD /* Pods-TYCircularSlider_Tests.release.xcconfig */,
+			);
+			name = "Pods-TYCircularSlider_Tests";
+			path = "Target Support Files/Pods-TYCircularSlider_Tests";
+			sourceTree = "<group>";
+		};
+		7BE75DA53313DB3452B9B91736D1B7E6 /* HGCircularSlider */ = {
+			isa = PBXGroup;
+			children = (
+				556DD4A7D07390A51D231E9BF401118B /* TYCircularIntervalPoint.swift */,
+				0F8E3ED106894960F1965D27F896CAC0 /* TYCircularIntervalPointList.swift */,
+				7BCC4A8B539DB46224740ED8148049FC /* TYCircularPoint.swift */,
+				803177580D561888D9B841A973C488CE /* TYCircularPointList.swift */,
+				384C12AB47A84753D7B340BC895F7665 /* TYCircularSlider.swift */,
+				26CCB86B2364FB8DB7831B5A182B77D3 /* TYCircularSlider+Draw.swift */,
+				58CF5FB9B2448B74E4FBDDE55CD1F5A0 /* TYCircularSliderHelper.swift */,
+				E409D8BE306B4311C2BA6CAAEB23F67A /* TYCircularTimeRange.swift */,
+				C8585386DBF1739E95B480E78212DF86 /* TYMidPointCircularSlider.swift */,
+				33B8B7AD5C25A65FD1DBFC4B343B6A37 /* TYRangeCircularSlider.swift */,
+				5D463FD94231F3DC6EB302EC324E5CF0 /* Pod */,
+				970B856C75DAF721AD52571DBD941707 /* Support Files */,
+			);
+			name = HGCircularSlider;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		970B856C75DAF721AD52571DBD941707 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				81F8B83C954D7A950640797DC96B3BEB /* HGCircularSlider.modulemap */,
+				CB549807FDB82B3BF4D1F36598341953 /* HGCircularSlider-dummy.m */,
+				D62326809AA84726053973E61D340380 /* HGCircularSlider-Info.plist */,
+				E15F73A3A1372937F27BC4AB2479B06D /* HGCircularSlider-prefix.pch */,
+				7BD1E9687D3E8D86D66A832EF66C08DE /* HGCircularSlider-umbrella.h */,
+				B8195FA44F59A02AF7E15EDE24B84D95 /* HGCircularSlider.debug.xcconfig */,
+				F159C2786300047B458B67956EAA20CF /* HGCircularSlider.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/HGCircularSlider";
 			sourceTree = "<group>";
 		};
-		61925295BDE53FC7B183C344DAB64C7D /* Pods-HGCircularSlider_Example */ = {
+		CE9123405490B2CD14D03132DC3E4C29 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2A9F8906F31F255CFAC8C955C0AD0EB8 /* Pods-HGCircularSlider_Example.modulemap */,
-				FA9955D22C912FD36A0B6FC9CC971DBA /* Pods-HGCircularSlider_Example-acknowledgements.markdown */,
-				8CD6A4F5CE27BAFFC31E4878DDB01BDD /* Pods-HGCircularSlider_Example-acknowledgements.plist */,
-				81FC561DDFE28687FAB5EE8B81912CF6 /* Pods-HGCircularSlider_Example-dummy.m */,
-				F48C480530B1EEC63B12E3D25AC41FBF /* Pods-HGCircularSlider_Example-frameworks.sh */,
-				4228D6D3CEDCA8624C7F5A1F8225A29B /* Pods-HGCircularSlider_Example-Info.plist */,
-				335044A8F24C8F65A1C993D9DF2B659F /* Pods-HGCircularSlider_Example-umbrella.h */,
-				DA1EA90A0DC940741BB9510A83433F9E /* Pods-HGCircularSlider_Example.debug.xcconfig */,
-				F5D4D0CC167B194D4B1C35D0105DB71E /* Pods-HGCircularSlider_Example.release.xcconfig */,
-			);
-			name = "Pods-HGCircularSlider_Example";
-			path = "Target Support Files/Pods-HGCircularSlider_Example";
-			sourceTree = "<group>";
-		};
-		96FF680C0F979CD912A5DD8690886049 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4C8EB513C076068C7C8748ADA51212CB /* HGCircularSlider */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		A3DDDF4884F12858D31687AF2FAAC716 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				F02865DEE9787F23B1A36BFEA162CC44 /* HGCircularSlider.podspec */,
-				6FF10228F135DF7D98356359375F0F50 /* LICENSE */,
-				F67D7741A5D5337FC7DD8B7720B2AAAA /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		B69618D6B496333892E43F3157EB0896 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				61925295BDE53FC7B183C344DAB64C7D /* Pods-HGCircularSlider_Example */,
-				C6B059E117F63D499F8B6C031BC3766F /* Pods-HGCircularSlider_Tests */,
+				4D1673CDE259F6B54A45BF76CB624DB0 /* Pods-TYCircularSlider_Example */,
+				641751E9DA3888F2A09A87BD572DCB7F /* Pods-TYCircularSlider_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		C6B059E117F63D499F8B6C031BC3766F /* Pods-HGCircularSlider_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				2878A7138E8A98E3B5985164713B37C3 /* Pods-HGCircularSlider_Tests.modulemap */,
-				A3CD69074F507B3569D5B513D27549F8 /* Pods-HGCircularSlider_Tests-acknowledgements.markdown */,
-				02588610488867870353D10A66D62EBA /* Pods-HGCircularSlider_Tests-acknowledgements.plist */,
-				4C16B40AB1704FFF772672C6D1C349BA /* Pods-HGCircularSlider_Tests-dummy.m */,
-				4926A9DAFEDBBFB51FC2FA92126C7032 /* Pods-HGCircularSlider_Tests-Info.plist */,
-				0531D278A24CD38372CAB079C2BCC3CC /* Pods-HGCircularSlider_Tests-umbrella.h */,
-				E89E5B545A6604882E250A1E69959933 /* Pods-HGCircularSlider_Tests.debug.xcconfig */,
-				40A9E1BF9BD7E69EC9050CD12524CA6A /* Pods-HGCircularSlider_Tests.release.xcconfig */,
-			);
-			name = "Pods-HGCircularSlider_Tests";
-			path = "Target Support Files/Pods-HGCircularSlider_Tests";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				96FF680C0F979CD912A5DD8690886049 /* Development Pods */,
+				DD5D31ED03F54737EF0D349549933E43 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				057E656A0CB10C5B45EA8F537AC58367 /* Products */,
-				B69618D6B496333892E43F3157EB0896 /* Targets Support Files */,
+				429C35DAFFAD6608CDC681094916A7D5 /* Products */,
+				CE9123405490B2CD14D03132DC3E4C29 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,30 +235,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DD5D31ED03F54737EF0D349549933E43 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BE75DA53313DB3452B9B91736D1B7E6 /* HGCircularSlider */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		13C1741C592104F8C20FE02B661E7316 /* Headers */ = {
+		10A7B1CBB62B800BF2EFD9B5CAF62BC4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D31FA82327319157548AD322E549892D /* HGCircularSlider-umbrella.h in Headers */,
+				E466360DCF7C1C83DA447DE171630E44 /* Pods-TYCircularSlider_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6872FE48965F0C887124DE767C63D0C4 /* Headers */ = {
+		3EFB25057E6511F483AC9F62F044E8B7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40899B669ADBCE3CCFB24AA17636D309 /* Pods-HGCircularSlider_Example-umbrella.h in Headers */,
+				F0768433AF9A53204545EB0B6F556443 /* Pods-TYCircularSlider_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7865A196B861ED2CAAA52B7FE03736B9 /* Headers */ = {
+		CFBDCDBBF8B3EDC38C701A52C2E3C424 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C478F5F095C98E740D3245CF551FDF4 /* Pods-HGCircularSlider_Tests-umbrella.h in Headers */,
+				6D155A37E8EDC827C1A3A647266053CE /* HGCircularSlider-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,12 +275,12 @@
 /* Begin PBXNativeTarget section */
 		82EEAE7DB07C6F17150BFE2EAD014CB2 /* HGCircularSlider */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 209737F3991E5E10253A8EE98D07E45A /* Build configuration list for PBXNativeTarget "HGCircularSlider" */;
+			buildConfigurationList = 2FC66D935E6CCE56805161EAE5E22267 /* Build configuration list for PBXNativeTarget "HGCircularSlider" */;
 			buildPhases = (
-				13C1741C592104F8C20FE02B661E7316 /* Headers */,
-				5F4AE57157B1AF31B392EC960371FD0C /* Sources */,
-				CBF214B1999E0D183009550EBCEAD2F7 /* Frameworks */,
-				DFB268ECD2322EAF254F96CF12866E0E /* Resources */,
+				CFBDCDBBF8B3EDC38C701A52C2E3C424 /* Headers */,
+				BF2E5CD7C11209821BCF574BA38CECC8 /* Sources */,
+				AE473125F6F318DAAF376DAEC2432D78 /* Frameworks */,
+				C92BA49541080BCFBF1B658A822D6702 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -298,42 +291,41 @@
 			productReference = DAF5270C2A5FC4F64F8B3718BF0E7429 /* HGCircularSlider */;
 			productType = "com.apple.product-type.framework";
 		};
-		B213802BB3911873FA13A1912E82012F /* Pods-HGCircularSlider_Example */ = {
+		F1400A162D5FA58652C097D618002DB9 /* Pods-TYCircularSlider_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF6AD42A271B108BCD9FED2DC35A3E54 /* Build configuration list for PBXNativeTarget "Pods-HGCircularSlider_Example" */;
+			buildConfigurationList = 0BFE7B11C7BEECEE56D1393CC3B68DEA /* Build configuration list for PBXNativeTarget "Pods-TYCircularSlider_Example" */;
 			buildPhases = (
-				6872FE48965F0C887124DE767C63D0C4 /* Headers */,
-				E3780A8E57B012676DA6F7CCDFFFBE44 /* Sources */,
-				F877423ADA6A3C9544E2BDCA0C6B85DB /* Frameworks */,
-				51D65DF8DF23DAE6663F31A05C5B830D /* Resources */,
+				3EFB25057E6511F483AC9F62F044E8B7 /* Headers */,
+				B83EE63ED823E145E89033885867E66C /* Sources */,
+				3115925FE44E6293F9B65F26AEAEFE46 /* Frameworks */,
+				311F17466E4F2A1890B714DCD2378133 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8CFCB1703F140AFEA6C5CA05F0D1FA0C /* PBXTargetDependency */,
+				18EA00B9299C2F5E7D5C03B1A34B90F1 /* PBXTargetDependency */,
 			);
-			name = "Pods-HGCircularSlider_Example";
-			productName = Pods_HGCircularSlider_Example;
-			productReference = 912406725FA30057CA11E94A42405766 /* Pods-HGCircularSlider_Example */;
+			name = "Pods-TYCircularSlider_Example";
+			productName = Pods_TYCircularSlider_Example;
+			productReference = A14AB0E4A2E268CE1D270BBE4F9EA8CA /* Pods-TYCircularSlider_Example */;
 			productType = "com.apple.product-type.framework";
 		};
-		B4659955CAF2176773FE23897A32DD3A /* Pods-HGCircularSlider_Tests */ = {
+		F6827EC0818CED526A4E71EEF42F7738 /* Pods-TYCircularSlider_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71F64063085424357D735FB00C3546E8 /* Build configuration list for PBXNativeTarget "Pods-HGCircularSlider_Tests" */;
+			buildConfigurationList = F4A09AA448DA2E9E8F525259E04AAC8A /* Build configuration list for PBXNativeTarget "Pods-TYCircularSlider_Tests" */;
 			buildPhases = (
-				7865A196B861ED2CAAA52B7FE03736B9 /* Headers */,
-				EC950E3E72A4FCC5E670AF65FA57A893 /* Sources */,
-				D97FF77A0FA289C47E8FA41216AF2BB7 /* Frameworks */,
-				F20549B4FBD7298BE528D7E080AE2CE8 /* Resources */,
+				10A7B1CBB62B800BF2EFD9B5CAF62BC4 /* Headers */,
+				B1E3DD513E08A6E07E24AE2B8EB0EB6B /* Sources */,
+				3912C553D3D57C00206492F73E7D47D8 /* Frameworks */,
+				C526960A7B6662DA679D873CE8566629 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1D2D1376C6F350216D70F6129F62D5E2 /* PBXTargetDependency */,
 			);
-			name = "Pods-HGCircularSlider_Tests";
-			productName = Pods_HGCircularSlider_Tests;
-			productReference = 54A3FC20C66408531C03EEF4B9821AE3 /* Pods-HGCircularSlider_Tests */;
+			name = "Pods-TYCircularSlider_Tests";
+			productName = Pods_TYCircularSlider_Tests;
+			productReference = 8EDFCD6C6A74D3F265892F00DB9C2987 /* Pods-TYCircularSlider_Tests */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -354,33 +346,33 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 057E656A0CB10C5B45EA8F537AC58367 /* Products */;
+			productRefGroup = 429C35DAFFAD6608CDC681094916A7D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				82EEAE7DB07C6F17150BFE2EAD014CB2 /* HGCircularSlider */,
-				B213802BB3911873FA13A1912E82012F /* Pods-HGCircularSlider_Example */,
-				B4659955CAF2176773FE23897A32DD3A /* Pods-HGCircularSlider_Tests */,
+				F1400A162D5FA58652C097D618002DB9 /* Pods-TYCircularSlider_Example */,
+				F6827EC0818CED526A4E71EEF42F7738 /* Pods-TYCircularSlider_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		51D65DF8DF23DAE6663F31A05C5B830D /* Resources */ = {
+		311F17466E4F2A1890B714DCD2378133 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFB268ECD2322EAF254F96CF12866E0E /* Resources */ = {
+		C526960A7B6662DA679D873CE8566629 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F20549B4FBD7298BE528D7E080AE2CE8 /* Resources */ = {
+		C92BA49541080BCFBF1B658A822D6702 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -390,61 +382,55 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5F4AE57157B1AF31B392EC960371FD0C /* Sources */ = {
+		B1E3DD513E08A6E07E24AE2B8EB0EB6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDBC8B58187F479A2DEF9EFF7E6C578A /* TYCircularIntervalPoint.swift in Sources */,
-				B1C5888644B6AA141ECDF3D9C48AEAE5 /* TYCircularIntervalPointList.swift in Sources */,
-				D32E40AECFFCB66184B44F701854D2AA /* TYCircularPoint.swift in Sources */,
-				02636088CEB624C623018266734AF6D5 /* TYCircularPointList.swift in Sources */,
-				8245B9A0315E12D8C08073DD92CE782F /* TYCircularSlider.swift in Sources */,
-				431892FDB896C2123440A1F2ADE65BD5 /* TYCircularSlider+Draw.swift in Sources */,
-				3B770B222BA9923A0013A6DC /* TYCircularTimeRange.swift in Sources */,
-				AC493AEDF149D215F5DE3AA40389E00F /* TYCircularSliderHelper.swift in Sources */,
-				88B3F81F0FAA0A128F9B742DDBC013E6 /* HGCircularSlider-dummy.m in Sources */,
-				9D542F528500C5B0529D86873AB8B737 /* TYMidPointCircularSlider.swift in Sources */,
-				9E23408893A226DD2E02E9D0F94DEFC8 /* TYRangeCircularSlider.swift in Sources */,
+				FA670C3168BD871A6229D694AE0AAFA4 /* Pods-TYCircularSlider_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3780A8E57B012676DA6F7CCDFFFBE44 /* Sources */ = {
+		B83EE63ED823E145E89033885867E66C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F754E5160634EE8F1CBB37E0344D72B /* Pods-HGCircularSlider_Example-dummy.m in Sources */,
+				3ED4227EC16047FBCE90B857B4339D6E /* Pods-TYCircularSlider_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC950E3E72A4FCC5E670AF65FA57A893 /* Sources */ = {
+		BF2E5CD7C11209821BCF574BA38CECC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				998A42BA79CE29C8F0FEB29BE52DC01E /* Pods-HGCircularSlider_Tests-dummy.m in Sources */,
+				7C7A9EE2B6CD9F5FAD761BB125CCE3F6 /* HGCircularSlider-dummy.m in Sources */,
+				653AC827DC9825F7B115FEF9CD21409E /* TYCircularIntervalPoint.swift in Sources */,
+				97530DCC24188BE278BFFC2E15C61684 /* TYCircularIntervalPointList.swift in Sources */,
+				94955AFC829AB9AAD7BCE0BE2E32666D /* TYCircularPoint.swift in Sources */,
+				5C6585982501769B33F7734D6C432DB8 /* TYCircularPointList.swift in Sources */,
+				528F3801E23F4D748364946B36EF2202 /* TYCircularSlider.swift in Sources */,
+				E44C9644DFB55F676395416E08357D06 /* TYCircularSlider+Draw.swift in Sources */,
+				3793EAA2F1669A72687E359F581C04CC /* TYCircularSliderHelper.swift in Sources */,
+				945CD0147B2FF4A9C249C89681E4826A /* TYCircularTimeRange.swift in Sources */,
+				21834C5C40F4D1C8522A90817F1D07F4 /* TYMidPointCircularSlider.swift in Sources */,
+				20CFED8896395CA1CE5A7392B112B59E /* TYRangeCircularSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1D2D1376C6F350216D70F6129F62D5E2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-HGCircularSlider_Example";
-			target = B213802BB3911873FA13A1912E82012F /* Pods-HGCircularSlider_Example */;
-			targetProxy = 492E41413A9FD5D1C3E7611E8F356DB9 /* PBXContainerItemProxy */;
-		};
-		8CFCB1703F140AFEA6C5CA05F0D1FA0C /* PBXTargetDependency */ = {
+		18EA00B9299C2F5E7D5C03B1A34B90F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HGCircularSlider;
 			target = 82EEAE7DB07C6F17150BFE2EAD014CB2 /* HGCircularSlider */;
-			targetProxy = 2A44F53FE0B788992A48B93F9B22FE82 /* PBXContainerItemProxy */;
+			targetProxy = 7D5D5B124DA3232991A5C145CA26E83A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1836442A1BFE98AF9EE052A20E94A472 /* Release */ = {
+		0DAAD5A2BE9B3B538938F3113080D391 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 776ED7C653C3A88DA02FD10175A670B9 /* HGCircularSlider.release.xcconfig */;
+			baseConfigurationReference = F159C2786300047B458B67956EAA20CF /* HGCircularSlider.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -474,9 +460,9 @@
 			};
 			name = Release;
 		};
-		25B980C0417641B979DB48BF0C6EBBDA /* Release */ = {
+		1C1A162A9298B3EC28B10A6F580C585B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5D4D0CC167B194D4B1C35D0105DB71E /* Pods-HGCircularSlider_Example.release.xcconfig */;
+			baseConfigurationReference = B1B12A20EB02A06FA5BF0ADE62719056 /* Pods-TYCircularSlider_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -489,12 +475,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HGCircularSlider_Example/Pods-HGCircularSlider_Example-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TYCircularSlider_Example/Pods-TYCircularSlider_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HGCircularSlider_Example/Pods-HGCircularSlider_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-TYCircularSlider_Example/Pods-TYCircularSlider_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -508,6 +494,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		2674C3D74065CBCE6F2B2D3E62F5F178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8195FA44F59A02AF7E15EDE24B84D95 /* HGCircularSlider.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider.modulemap";
+				PRODUCT_MODULE_NAME = HGCircularSlider;
+				PRODUCT_NAME = HGCircularSlider;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -575,75 +592,6 @@
 			};
 			name = Debug;
 		};
-		4CD8AAE23CAEAB0942B0F3CF107CAD8E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA1EA90A0DC940741BB9510A83433F9E /* Pods-HGCircularSlider_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HGCircularSlider_Example/Pods-HGCircularSlider_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HGCircularSlider_Example/Pods-HGCircularSlider_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5761E5C3A00D9D301057426388557869 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40A9E1BF9BD7E69EC9050CD12524CA6A /* Pods-HGCircularSlider_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HGCircularSlider_Tests/Pods-HGCircularSlider_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HGCircularSlider_Tests/Pods-HGCircularSlider_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -699,15 +647,16 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		77682A35E9555DD0D88210AC30F46A84 /* Debug */ = {
+		80A8D625519B214C7405373BE1B504C1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E89E5B545A6604882E250A1E69959933 /* Pods-HGCircularSlider_Tests.debug.xcconfig */;
+			baseConfigurationReference = 45DF0C2E0BDAC7A69AAB6A9B104694BD /* Pods-TYCircularSlider_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -720,12 +669,47 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-HGCircularSlider_Tests/Pods-HGCircularSlider_Tests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TYCircularSlider_Tests/Pods-TYCircularSlider_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-HGCircularSlider_Tests/Pods-HGCircularSlider_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-TYCircularSlider_Tests/Pods-TYCircularSlider_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8FE08BF713524EE90F4D83ED5950590A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 673BD00B701BBE3A892FC47021D2C049 /* Pods-TYCircularSlider_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TYCircularSlider_Tests/Pods-TYCircularSlider_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TYCircularSlider_Tests/Pods-TYCircularSlider_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -739,11 +723,13 @@
 			};
 			name = Debug;
 		};
-		D3EC7081C0A4A8920510A1E40A805514 /* Debug */ = {
+		C4E7CB400DB79F105FF69F7C5C43312F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E1BF6C83725DDB4DC670EBED77CCA01 /* HGCircularSlider.debug.xcconfig */;
+			baseConfigurationReference = C37C0E6E3668DC73EC271C3FB3ADB7A0 /* Pods-TYCircularSlider_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -752,18 +738,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HGCircularSlider/HGCircularSlider-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TYCircularSlider_Example/Pods-TYCircularSlider_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HGCircularSlider/HGCircularSlider.modulemap";
-				PRODUCT_MODULE_NAME = HGCircularSlider;
-				PRODUCT_NAME = HGCircularSlider;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TYCircularSlider_Example/Pods-TYCircularSlider_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -773,11 +760,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		209737F3991E5E10253A8EE98D07E45A /* Build configuration list for PBXNativeTarget "HGCircularSlider" */ = {
+		0BFE7B11C7BEECEE56D1393CC3B68DEA /* Build configuration list for PBXNativeTarget "Pods-TYCircularSlider_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3EC7081C0A4A8920510A1E40A805514 /* Debug */,
-				1836442A1BFE98AF9EE052A20E94A472 /* Release */,
+				C4E7CB400DB79F105FF69F7C5C43312F /* Debug */,
+				1C1A162A9298B3EC28B10A6F580C585B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FC66D935E6CCE56805161EAE5E22267 /* Build configuration list for PBXNativeTarget "HGCircularSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2674C3D74065CBCE6F2B2D3E62F5F178 /* Debug */,
+				0DAAD5A2BE9B3B538938F3113080D391 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -791,20 +787,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71F64063085424357D735FB00C3546E8 /* Build configuration list for PBXNativeTarget "Pods-HGCircularSlider_Tests" */ = {
+		F4A09AA448DA2E9E8F525259E04AAC8A /* Build configuration list for PBXNativeTarget "Pods-TYCircularSlider_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				77682A35E9555DD0D88210AC30F46A84 /* Debug */,
-				5761E5C3A00D9D301057426388557869 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CF6AD42A271B108BCD9FED2DC35A3E54 /* Build configuration list for PBXNativeTarget "Pods-HGCircularSlider_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4CD8AAE23CAEAB0942B0F3CF107CAD8E /* Debug */,
-				25B980C0417641B979DB48BF0C6EBBDA /* Release */,
+				8FE08BF713524EE90F4D83ED5950590A /* Debug */,
+				80A8D625519B214C7405373BE1B504C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

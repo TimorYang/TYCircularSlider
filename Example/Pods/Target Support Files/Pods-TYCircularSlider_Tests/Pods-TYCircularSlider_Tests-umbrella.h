@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_HGCircularSlider_TestsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_HGCircularSlider_TestsVersionString[];
+FOUNDATION_EXPORT double Pods_TYCircularSlider_TestsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_TYCircularSlider_TestsVersionString[];
 

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DF970E3D7BE7173DEC1D05C /* Pods_HGCircularSlider_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C7918EC49141F7F4652E8F1 /* Pods_HGCircularSlider_Tests.framework */; };
 		3B770B292BAA7E9C0013A6DC /* TimeLineViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B770B272BAA7E9C0013A6DC /* TimeLineViewCell.swift */; };
 		3B770B2A2BAA7E9C0013A6DC /* TimeLineViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B770B282BAA7E9C0013A6DC /* TimeLineViewCell.xib */; };
 		3EC27E521EA546F700631582 /* CircularSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC27E511EA546F700631582 /* CircularSliderViewController.swift */; };
+		4D2BB01E6C65EA720ADBC8F4 /* Pods_TYCircularSlider_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62332031D289495868D937E8 /* Pods_TYCircularSlider_Example.framework */; };
 		551FF6F21DD3BFE300BD5B76 /* OtherExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551FF6F11DD3BFE300BD5B76 /* OtherExampleViewController.swift */; };
 		5539B1B91DD275250038D49D /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539B1B81DD275250038D49D /* PlayerViewController.swift */; };
 		5539B1BB1DD276C00038D49D /* StrangeZero.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5539B1BA1DD276C00038D49D /* StrangeZero.mp3 */; };
@@ -21,9 +21,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		7D058E515881506775E70545 /* Pods_TYCircularSlider_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8D7CB0706D4C856F783F70 /* Pods_TYCircularSlider_Tests.framework */; };
 		BB409EA9235C82CE006DC844 /* CircularSliderHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB409EA7235C82CA006DC844 /* CircularSliderHelperTests.swift */; };
 		BB409EAB235C8ACE006DC844 /* CircularSliderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB409EAA235C8ACE006DC844 /* CircularSliderTests.swift */; };
-		BDF84380A076F46A79D0C634 /* Pods_HGCircularSlider_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A4019E034E0265198683A8 /* Pods_HGCircularSlider_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,17 +37,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0308C15B73FECF67F2F5BCBE /* Pods-TYCircularSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TYCircularSlider_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TYCircularSlider_Example/Pods-TYCircularSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		04EAC630898381E6412A72E4 /* Pods-HGCircularSlider_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCircularSlider_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HGCircularSlider_Example/Pods-HGCircularSlider_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2A9608AFE40174911E5079C3 /* Pods-HGCircularSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCircularSlider_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HGCircularSlider_Tests/Pods-HGCircularSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2CAE2DD4D97C612E1DE86992 /* Pods-TYCircularSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TYCircularSlider_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TYCircularSlider_Tests/Pods-TYCircularSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3B770B272BAA7E9C0013A6DC /* TimeLineViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineViewCell.swift; sourceTree = "<group>"; };
 		3B770B282BAA7E9C0013A6DC /* TimeLineViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeLineViewCell.xib; sourceTree = "<group>"; };
 		3EC27E511EA546F700631582 /* CircularSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSliderViewController.swift; sourceTree = "<group>"; };
-		41A4019E034E0265198683A8 /* Pods_HGCircularSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGCircularSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47EC1122B43F882A3D3679B7 /* HGCircularSlider.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HGCircularSlider.podspec; path = ../HGCircularSlider.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		551FF6F11DD3BFE300BD5B76 /* OtherExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherExampleViewController.swift; sourceTree = "<group>"; };
 		5539B1B81DD275250038D49D /* PlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		5539B1BA1DD276C00038D49D /* StrangeZero.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = StrangeZero.mp3; sourceTree = "<group>"; };
 		55CE65381DD3D32100B0C2B2 /* OClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OClockViewController.swift; sourceTree = "<group>"; };
+		5C8D7CB0706D4C856F783F70 /* Pods_TYCircularSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TYCircularSlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* TYCircularSlider_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TYCircularSlider_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +59,10 @@
 		607FACE51AFB9204008FA782 /* TYCircularSlider_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TYCircularSlider_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6C7918EC49141F7F4652E8F1 /* Pods_HGCircularSlider_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HGCircularSlider_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99A3B0410141275989079EB6 /* Pods-HGCircularSlider_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCircularSlider_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HGCircularSlider_Tests/Pods-HGCircularSlider_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		62332031D289495868D937E8 /* Pods_TYCircularSlider_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TYCircularSlider_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75DECA87AA6D55763FCA2EEE /* Pods-TYCircularSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TYCircularSlider_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-TYCircularSlider_Example/Pods-TYCircularSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9BA305BCC009CE17283FE799 /* Pods-HGCircularSlider_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HGCircularSlider_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HGCircularSlider_Example/Pods-HGCircularSlider_Example.release.xcconfig"; sourceTree = "<group>"; };
+		A7D06653DA90C79160A8166E /* Pods-TYCircularSlider_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TYCircularSlider_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TYCircularSlider_Tests/Pods-TYCircularSlider_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB409EA7235C82CA006DC844 /* CircularSliderHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularSliderHelperTests.swift; sourceTree = "<group>"; };
 		BB409EAA235C8ACE006DC844 /* CircularSliderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularSliderTests.swift; sourceTree = "<group>"; };
 		E7D1A678D25EC3365B800DB3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -72,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDF84380A076F46A79D0C634 /* Pods_HGCircularSlider_Example.framework in Frameworks */,
+				4D2BB01E6C65EA720ADBC8F4 /* Pods_TYCircularSlider_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DF970E3D7BE7173DEC1D05C /* Pods_HGCircularSlider_Tests.framework in Frameworks */,
+				7D058E515881506775E70545 /* Pods_TYCircularSlider_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +94,10 @@
 			children = (
 				04EAC630898381E6412A72E4 /* Pods-HGCircularSlider_Example.debug.xcconfig */,
 				9BA305BCC009CE17283FE799 /* Pods-HGCircularSlider_Example.release.xcconfig */,
-				2A9608AFE40174911E5079C3 /* Pods-HGCircularSlider_Tests.debug.xcconfig */,
-				99A3B0410141275989079EB6 /* Pods-HGCircularSlider_Tests.release.xcconfig */,
+				0308C15B73FECF67F2F5BCBE /* Pods-TYCircularSlider_Example.debug.xcconfig */,
+				75DECA87AA6D55763FCA2EEE /* Pods-TYCircularSlider_Example.release.xcconfig */,
+				A7D06653DA90C79160A8166E /* Pods-TYCircularSlider_Tests.debug.xcconfig */,
+				2CAE2DD4D97C612E1DE86992 /* Pods-TYCircularSlider_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -180,8 +184,8 @@
 		DE059D042D578ECE6977B31D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				41A4019E034E0265198683A8 /* Pods_HGCircularSlider_Example.framework */,
-				6C7918EC49141F7F4652E8F1 /* Pods_HGCircularSlider_Tests.framework */,
+				62332031D289495868D937E8 /* Pods_TYCircularSlider_Example.framework */,
+				5C8D7CB0706D4C856F783F70 /* Pods_TYCircularSlider_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -197,7 +201,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				91331C76A6F912B59276B544 /* [CP] Embed Pods Frameworks */,
+				F65A8B6CFDF9309B899628DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,7 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TYCircularSlider_Tests" */;
 			buildPhases = (
-				066A95928ECD5B97A483FA2F /* [CP] Check Pods Manifest.lock */,
+				552FE269FAF6A4E2CF9F7D6F /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -294,40 +298,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		066A95928ECD5B97A483FA2F /* [CP] Check Pods Manifest.lock */ = {
+		552FE269FAF6A4E2CF9F7D6F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HGCircularSlider_Tests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TYCircularSlider_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		91331C76A6F912B59276B544 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HGCircularSlider_Example/Pods-HGCircularSlider_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/HGCircularSlider/HGCircularSlider.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HGCircularSlider.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HGCircularSlider_Example/Pods-HGCircularSlider_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9C30214565096BEB7531CD5 /* [CP] Check Pods Manifest.lock */ = {
@@ -341,11 +331,29 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HGCircularSlider_Example-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-TYCircularSlider_Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F65A8B6CFDF9309B899628DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TYCircularSlider_Example/Pods-TYCircularSlider_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HGCircularSlider/HGCircularSlider.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HGCircularSlider.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TYCircularSlider_Example/Pods-TYCircularSlider_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -508,7 +516,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04EAC630898381E6412A72E4 /* Pods-HGCircularSlider_Example.debug.xcconfig */;
+			baseConfigurationReference = 0308C15B73FECF67F2F5BCBE /* Pods-TYCircularSlider_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -530,7 +538,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BA305BCC009CE17283FE799 /* Pods-HGCircularSlider_Example.release.xcconfig */;
+			baseConfigurationReference = 75DECA87AA6D55763FCA2EEE /* Pods-TYCircularSlider_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -552,7 +560,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A9608AFE40174911E5079C3 /* Pods-HGCircularSlider_Tests.debug.xcconfig */;
+			baseConfigurationReference = A7D06653DA90C79160A8166E /* Pods-TYCircularSlider_Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -573,7 +581,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99A3B0410141275989079EB6 /* Pods-HGCircularSlider_Tests.release.xcconfig */;
+			baseConfigurationReference = 2CAE2DD4D97C612E1DE86992 /* Pods-TYCircularSlider_Tests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;

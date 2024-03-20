@@ -1,12 +1,13 @@
+# Uncomment the next line to define a global platform for your project
 use_frameworks!
 platform :ios, '12.0'
 
-target 'HGCircularSlider_Example' do
+target 'TYCircularSlider_Example' do
   pod 'HGCircularSlider', :path => '../'
-
-  target 'HGCircularSlider_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  
 end
+
+target 'TYCircularSlider_Tests' do
+  inherit! :search_paths
+end
+
